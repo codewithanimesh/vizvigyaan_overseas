@@ -1,0 +1,11 @@
+.guidance-container{
+    display: flex;
+    
+    padding: 64px 100px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 30px;
+    flex: 1 0 0;
+    background: linear-gradient(180deg, #FFF 0%, rgba(255, 255, 255, 0.00) 98%);
+
+}
