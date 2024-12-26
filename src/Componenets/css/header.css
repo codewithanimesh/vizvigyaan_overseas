@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Catamaran:wght@400;500;600;700&display=swap');
+
+
+
+
+.header{
+  width: 100%;
+  display: flex;
+  border-radius: 0px 34px 0px 0px;
+  background: #F68712;
+
+}
+
+  .logo{
+    display: flex;
+  align-items: center;
+  gap: 64px;
+}
+.navbar {
+  width: 95%;
+  display: flex;
+  padding: 8px 8px 8px 100px;
+  justify-content: space-between;
+  align-items: center;
+  flex: 1 0 0;
+  border-radius: 0px 34px 0px 0px;
+background:#F7F9FB;
+}
+
+.nav-links {
+  display: flex;
+  height: 28px;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  font-family: Catamaran;
+}
+
+.nav-links a {
+  color: #2C3E50;
+  font-family: Catamaran;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  text-decoration: none;
+}
+
+.nav-linkss a[href="/contact"] {
+  display: flex;
+  padding: 10px 24px;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  border-radius: 36px 25px 0px 36px;
+background: #00ADEF;
+color: #FFF;
+font-family: Catamaran;
+font-size: 16px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+text-decoration: none;
+margin-left:57rem;
+}
+
+.mobile-menu-btn {
+  display: none;
+  font-family: Catamaran;
+}
+
+@media screen and (max-width: 768px) {
+  .navbar {
+    padding: 15px 20px;
+  }
+
+  .mobile-menu-btn {
+    display: block;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    background: none;
+    border: none;
+    font-size: 24px;
+    z-index: 100;
+  }
+
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    right: 0;
+    background: #F7F9FB;
+    flex-direction: column;
+    height: auto;
+    padding: 20px;
+    width: 100%;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-links a {
+    font-size: 18px;
+    width: 100%;
+    text-align: center;
+    padding: 12px 0;
+  }
+
+  .nav-links a[href="/contact"] {
+    min-width: 100%;
+    max-width: 100%;
+    margin: 10px 0;
+  }
+
+  .logo img {
+    max-width: 150px;
+  }
+}
+
+
+.header-end{
+background: #F68712;
+ width: 5%;
+}
