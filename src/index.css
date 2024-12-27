@@ -15,3 +15,6 @@ code {
   --primary-color: #F28623;
   --font-size:36px;
 }
+*{
+  box-sizing: border-box;
+}

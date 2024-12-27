@@ -11,12 +11,7 @@ const Visa = () => {
     <div className="visa-container">
       <div className="visa-content-container">
         <div className="visa-content">
-          <h2>
-            <span style={{ color: "black" }}>Visa types and eligibility</span>{" "}
-            <br />
-            <span style={{ color: " #F28623" }}>assessment</span>
-            <br />{" "}
-          </h2>
+          
           <div
             style={{
               width: "51.564px",
@@ -71,29 +66,40 @@ const Visa = () => {
             }}
           ></div>
         </div>{" "}
+       
         <div className="side-image">
           <img
             src={sideimg}
             alt="side image"
             style={{
-              width: "772px",
-              height: "594px",
+              width: "537px",
+              height: "584px",
               marginRight: "34px",
               borderRadius: "16px",
               background:
                 "url(" + sideimg + ") lightgray 50% / cover no-repeat",
               position: "relative",
               marginTop: "64px",
-              zIndex: "1",
+              top:"-20px"
+           
             }}
           />
         </div>
       </div>
+      <div className="new-visa-div">
+      <h2 className="heading-visa-div">
+            <span style={{ color: "black" }}>Visa types and eligibility</span>{" "}
+            <br />
+            <span style={{ color: " #F28623" }}>assessment</span>
+            <br />
+          </h2>
       <div className="visa-grid">
         <div className="visa-grid-item">
           <div className="visa-grid-item-heading">
             <div className="grid-item-inner-pill">
-                <img src={plane} alt="plane" style={{width:"20px",height:"20px",flexShrink:"0",backgroundColor:"#f34e5e",borderRadius:"50%",display:"flex",justifyContent:"center",alignItems:"center",rotate:"320deg"}}/>
+                <div className="position-imge-cercle" src={plane} alt="plane" style={{width:"20px",height:"20px",flexShrink:"0",backgroundColor:"#f34e5e",borderRadius:"50%",display:"flex",justifyContent:"center",alignItems:"center",rotate:"320deg",padding:"1.1rem"}}>
+                  <img src={plane} style={{rotate:"10deg"}}/>
+                </div>
             </div>
             <h3>Tourist Visa</h3>
             <p>Eligible for students from all over the world</p>
@@ -101,7 +107,9 @@ const Visa = () => {
           </div>
           <div className="visa-grid-item-heading">
           <div className="grid-item-inner-pill">
-                <img src={growth} alt="plane" style={{width:"20px",height:"20px",flexShrink:"0",backgroundColor:"#f34e5e",borderRadius:"50%",display:"flex",justifyContent:"center",alignItems:"center",rotate:"320deg"}}/>
+                <div className="position-imge-cercle" src={plane} alt="plane" style={{width:"20px",height:"20px",flexShrink:"0",backgroundColor:"#f34e5e",borderRadius:"50%",display:"flex",justifyContent:"center",alignItems:"center",rotate:"320deg",padding:"1.1rem"}}>
+                  <img src={growth} style={{rotate:"-5deg"}}/>
+                </div>
             </div>
             <h3>Commerical Visa</h3>
             <p>Eligible for students from all over the world</p>
@@ -109,16 +117,19 @@ const Visa = () => {
           </div>
           <div className="visa-grid-item-heading">
           <div className="grid-item-inner-pill">
-                <img src={graduation} alt="plane" style={{width:"20px",height:"20px",flexShrink:"0",backgroundColor:"#f34e5e",borderRadius:"50%",display:"flex",justifyContent:"center",alignItems:"center",rotate:"320deg"}}/>
+                <div className="position-imge-cercle" src={plane} alt="plane" style={{width:"20px",height:"20px",flexShrink:"0",backgroundColor:"#f34e5e",borderRadius:"50%",display:"flex",justifyContent:"center",alignItems:"center",rotate:"320deg",padding:"1.1rem"}}>
+                  <img src={growth} style={{rotate:"-5deg"}}/>
+                </div>
             </div>
-            <h3>Study Visa</h3>
+            <h3>Commerical Visa</h3>
             <p>Eligible for students from all over the world</p>
-            <p>Valid for 12 months</p>
-            <p>Valid for 12 months</p>
+      
           </div>
           <div className="visa-grid-item-heading">
           <div className="grid-item-inner-pill">
-                <img src={buildings} alt="plane" style={{width:"20px",height:"20px",flexShrink:"0",backgroundColor:"#f34e5e",borderRadius:"50%",display:"flex",justifyContent:"center",alignItems:"center",rotate:"320deg"}}/>
+                <div className="position-imge-cercle" src={plane} alt="plane" style={{width:"20px",height:"20px",flexShrink:"0",backgroundColor:"#f34e5e",borderRadius:"50%",display:"flex",justifyContent:"center",alignItems:"center",rotate:"320deg",padding:"1.1rem"}}>
+                  <img src={buildings} style={{rotate:"-5deg"}}/>
+                </div>
             </div>
             <h3>Residence Visa</h3>
             <p>Eligible for students from all over the world</p>
@@ -126,7 +137,9 @@ const Visa = () => {
           </div>
           <div className="visa-grid-item-heading">
           <div className="grid-item-inner-pill">
-                <img src={graduation} alt="plane" style={{width:"20px",height:"20px",flexShrink:"0",backgroundColor:"#f34e5e",borderRadius:"50%",display:"flex",justifyContent:"center",alignItems:"center",rotate:"320deg"}}/>
+                <div className="position-imge-cercle" src={plane} alt="plane" style={{width:"20px",height:"20px",flexShrink:"0",backgroundColor:"#f34e5e",borderRadius:"50%",display:"flex",justifyContent:"center",alignItems:"center",rotate:"320deg",padding:"1.1rem"}}>
+                  <img src={graduation} style={{rotate:"-5deg"}}/>
+                </div>
             </div>
             <h3>Student Visa</h3>
             <p>Eligible for students from all over the world</p>
@@ -134,15 +147,20 @@ const Visa = () => {
           </div>
           <div className="visa-grid-item-heading" style={{zIndex: "1"}}>
           <div className="grid-item-inner-pill">
-                <img src={vector} alt="plane" style={{width:"20px",height:"20px",flexShrink:"0",backgroundColor:"#f34e5e",borderRadius:"50%",display:"flex",justifyContent:"center",alignItems:"center",rotate:"320deg"}}/>
+                <div className="position-imge-cercle" src={plane} alt="plane" style={{width:"20px",height:"20px",flexShrink:"0",backgroundColor:"#f34e5e",borderRadius:"50%",display:"flex",justifyContent:"center",alignItems:"center",rotate:"320deg",padding:"1.1rem"}}>
+                  <img src={vector} style={{rotate:"-5deg"}}/>
+                </div>
             </div>
             <h3>Business Visa</h3>
             <p>Eligible for students from all over the world</p>
            
           </div>
         </div>
-      </div>{" "}
+      </div>
+      </div>
     </div>
   );
 };
 export default Visa;
+
+

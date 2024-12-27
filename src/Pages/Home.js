@@ -14,7 +14,6 @@ return(<>
 
 <Hero />
 <Visa />
-{/* <Guidance/> */}
 <Guidance2/>
 <OurStories/>
 <QuaryForm/>
