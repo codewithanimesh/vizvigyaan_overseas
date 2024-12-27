@@ -1,0 +1,97 @@
+.questions-container {
+    display: flex;
+    padding: 100px;
+    align-items: flex-start;
+    gap: 100px;
+    align-self: stretch;
+    background: #FFF;
+}
+
+.questions-card1 {
+    position: sticky;
+    top: 100px;
+    display: flex;
+    padding-top: 40px;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex: 1 0 0;
+    height: fit-content;
+}
+.questions-card1 h3 {
+    align-self: stretch;
+    color: #414141;
+    font-family: Catamaran;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 40px;
+}
+
+.questions-card1 p {
+    width: 434px;
+    color: #8B8B8B;
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.questions-card1 .img {
+    width: 273px;
+    height: 224px;
+}
+
+.questions-card2 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    flex: 1 0 0;
+    overflow: visible;
+}
+.questions-card-ser, .questions-card-ser1 {
+    display: flex;
+    padding: 16px 24px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 24px;
+    align-self: stretch;
+    border-radius: 8px;
+    border: 1px solid #E4F2F8;
+    box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.04);
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.questions-card-ser h4, .questions-card-ser1 h4 {
+    color: #414141;
+    font-family: Catamaran;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.questions-card-ser p, .questions-card-ser1 p {
+    align-self: stretch;
+    color: #8B8B8B;
+    font-family: Inter;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+    margin: 0;
+}
+
+.questions-card-ser1.active p {
+    max-height: 200px;
+    margin-top: 10px;
+    transition: max-height 0.3s ease-in;
+}
+

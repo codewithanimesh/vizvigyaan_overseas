@@ -1,0 +1,251 @@
+.main-div-guildace-osr-stories {
+    display: flex;
+    padding: 100px;
+    align-items: flex-start;
+    gap: 30px;
+    flex: 1 0 0;
+    background: #F7F9FB;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    justify-content: space-between;
+    align-items: end;
+}
+
+.guildace-content {
+    width: 100%;
+}
+
+.guildace-title-div {
+    h2 {
+        color: #414141;
+        font-family: Catamaran;
+        font-size: 36px;
+        font-weight: 700;
+        line-height: 40px;
+    }
+
+    .style-text-heading {
+        font-size: 36px;
+        font-weight: 700;
+    }
+
+    .color-last {
+        color: #F28623;
+    }
+
+    .style-paragraph {
+        color: #8B8B8B;
+        font-family: Inter;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: normal;
+    }
+}
+
+.map-item-div-ourstories {
+    display: flex;
+    width: 100%;
+    max-width: 1032px;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    /* margin: 0 auto; */
+    min-width: 920px;
+}
+
+.map-items-container-ourstories {
+    display: flex;
+    width: 100%;
+    max-width: 355px;
+    min-width: 300px;
+    padding: 24px 24px 24px 70px;
+    align-items: flex-end;
+    gap: 10px;
+    flex-shrink: 0;
+    border-radius: 16px;
+    border: 1px solid #E4F2F8;
+    background: #FFF;
+    position: relative;
+    overflow: hidden;
+    margin: 10px;
+    padding-left: 0;
+    border-left: 3px solid transparent;
+}
+
+.logo-image-conatainer {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    gap: 24px;
+    align-self: stretch;
+    border-left: 3px solid transparent;
+    padding-left: 20px;
+}
+
+.rotate-div-content-ourstories {
+    display: flex;
+    padding: 16px;
+    align-items: flex-start;
+    border-radius: 38px;
+    background: #FFF0EB;
+    margin-left: 20px;
+}
+
+.number-head {
+    color: #414141;
+    font-family: Inter;
+    font-size: 40px;
+    font-weight: 300;
+    margin: 0;
+}
+
+.style-paragraph {
+    color: #8B8B8B;
+    font-family: Inter;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.image-logo-div {
+    display: flex;
+    padding: 16px;
+    align-items: flex-start;
+    border-radius: 38px;
+    background: #FFF0EB;
+}
+
+.image-logo-conatainer {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    gap: 24px;
+    align-self: stretch;
+}
+
+.rotate-div-content-ourstories {
+    display: flex;
+    padding: 16px;
+    align-items: flex-start;
+    border-radius: 38px;
+    background: #FFF0EB;
+    margin-left: 20px;
+}
+
+.image-div-bag {
+    width: 434px;
+    height: 440px;
+    background: radial-gradient(38.21% 65.5% at 50% 50%, rgba(247, 249, 251, 0.00) 0%, #F7F9FB 100%), url("/src/assests/Rectangle\ 14.png") lightgray 50% / cover no-repeat;
+    margin-bottom: 2rem;
+}
+
+@media (max-width: 1200px) {
+    .main-div-guildace-osr-stories {
+        padding: 80px;
+    }
+
+    .image-div-bag {
+        width: 350px;
+        height: 350px;
+    }
+
+    .map-item-div-ourstories {
+        width: 100%;
+        max-width: 100%;
+        min-width: 300px;
+    }
+
+    .map-items-container-ourstories {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .rotate-div-content-ourstories {
+        margin-left: 10px;
+    }
+
+    .number-head {
+        font-size: 32px;
+    }
+
+    .image-logo-div {
+        padding: 12px;
+    }
+
+    .logo-image-conatainer {
+        gap: 16px;
+    }
+}
+
+@media (max-width: 768px) {
+    .main-div-guildace-osr-stories {
+        padding: 60px;
+        flex-direction: column;
+    }
+
+    .image-div-bag {
+        display: none;
+    }
+
+    .map-items-container-ourstories {
+        padding: 16px;
+    }
+
+    .map-item-div-ourstories {
+        width: 100%;
+        min-width: 100%;
+    }
+
+    .rotate-div-content-ourstories {
+        margin-left: 0;
+    }
+
+    .number-head {
+        font-size: 28px;
+    }
+
+    .image-logo-div {
+        padding: 10px;
+    }
+
+    .logo-image-conatainer {
+        gap: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .main-div-guildace-osr-stories {
+        padding: 40px;
+        flex-direction: column;
+    }
+
+    .image-div-bag {
+        width: 250px;
+        height: 250px;
+    }
+
+    .map-items-container-ourstories {
+        padding: 12px;
+    }
+
+    .map-item-div-ourstories {
+        width: 100%;
+    }
+
+    .rotate-div-content-ourstories {
+        margin-left: 0;
+    }
+
+    .number-head {
+        font-size: 24px;
+    }
+
+    .image-logo-div {
+        padding: 8px;
+    }
+
+    .logo-image-conatainer {
+        gap: 10px;
+    }
+}

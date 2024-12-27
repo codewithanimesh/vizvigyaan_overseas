@@ -1,11 +1,250 @@
-.guidance-container{
+.guidance-container {
     display: flex;
-    
     padding: 64px 100px;
     flex-direction: column;
     align-items: flex-start;
     gap: 30px;
     flex: 1 0 0;
     background: linear-gradient(180deg, #FFF 0%, rgba(255, 255, 255, 0.00) 98%);
+}
 
+.main-div-guildace {
+    display: flex;
+    padding: 100px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 30px;
+    flex: 1 0 0;
+    background: #F7F9FB;
+    background-image: url("/src/assests/Frame\ 171.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.guildace-content-div {
+    display: flex;
+    padding: 32px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 40px;
+    border: 1px solid rgba(255, 255, 255, 0.64);
+    background: rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(5px);
+}
+
+.guildace-title-div h2 {
+    color: #414141;
+    font-family: Catamaran;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 40px;
+}
+
+.color-last {
+    color: var(--primary-color);
+}
+
+.style-paragraph {
+    align-self: stretch;
+    color: #8B8B8B;
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.map-item-div {
+    display: flex;
+    width: 100%;
+    max-width: 1032px;
+    align-items: center;
+    align-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin: 0 auto;
+}
+
+.map-items-container {
+    display: flex;
+    width: 100%;
+    max-width: 355px;
+    min-width: 300px;
+    padding: 24px 24px 24px 70px;
+    align-items: flex-end;
+    gap: 10px;
+    flex-shrink: 0;
+    border-radius: 16px;
+    border: 1px solid #E4F2F8;
+    background: #FFF;
+    position: relative;
+    overflow: hidden;
+    margin: 10px;
+}
+
+.rotate-div-content h3 {
+    color: #414141;
+    font-family: Catamaran;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.rotating-div {
+    display: flex;
+    width: 122.928px;
+    transform: rotate(45deg);
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 10px;
+    position: absolute;
+    left: -50px;
+    top: 0;
+    border-radius: 35px;
+    background-color: #EDF6FA;
+    align-items: end;
+    overflow: hidden;
+}
+
+.dot-of-number {
+    display: flex;
+    width: 20px;
+    height: 20px;
+    transform: rotate(-45deg);
+    padding: 8px 11px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 22px;
+    background: #FE6C3F;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.16);
+}
+
+@media (max-width: 1200px) {
+    .main-div-guildace {
+        padding: 80px;
+    }
+
+    .guildace-content-div {
+        padding: 20px;
+    }
+
+    .map-item-div {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .map-items-container {
+        width: 100%;
+        max-width: 100%;
+        padding: 24px 24px 24px 50px;
+    }
+
+    .rotate-div-content h3 {
+        font-size: 18px;
+    }
+
+    .guildace-title-div h2 {
+        font-size: 30px;
+    }
+
+    .style-paragraph {
+        font-size: 14px;
+    }
+
+    .rotating-div {
+        width: 100px;
+        left: -40px;
+    }
+
+    .dot-of-number {
+        width: 18px;
+        height: 18px;
+        padding: 6px 8px;
+    }
+}
+
+@media (max-width: 768px) {
+    .main-div-guildace {
+        padding: 60px;
+    }
+
+    .guildace-content-div {
+        padding: 16px;
+    }
+
+    .map-item-div {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .map-items-container {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .rotate-div-content h3 {
+        font-size: 16px;
+    }
+
+    .guildace-title-div h2 {
+        font-size: 24px;
+    }
+
+    .style-paragraph {
+        font-size: 14px;
+    }
+
+    .rotating-div {
+        width: 90px;
+        left: -30px;
+    }
+
+    .dot-of-number {
+        width: 16px;
+        height: 16px;
+        padding: 6px 6px;
+    }
+}
+
+@media (max-width: 480px) {
+    .main-div-guildace {
+        padding: 40px;
+    }
+
+    .guildace-content-div {
+        padding: 12px;
+    }
+
+    .map-items-container {
+        padding: 16px;
+    }
+
+    .rotate-div-content h3 {
+        font-size: 14px;
+    }
+
+    .guildace-title-div h2 {
+        font-size: 20px;
+    }
+
+    .style-paragraph {
+        font-size: 12px;
+    }
+
+    .rotating-div {
+        width: 80px;
+        left: -20px;
+    }
+
+    .dot-of-number {
+        width: 14px;
+        height: 14px;
+        padding: 5px 5px;
+    }
 }
