@@ -1,12 +1,52 @@
-import React from "react";
-import heroimg from "../assests/heroimg.jpeg"
+import React, { useEffect, useRef } from "react";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import heroimg from "../assests/heroimg.jpeg";
 import "./css/hero.css";
 import familyimg from "../assests/familyImg.png";
 import family from "../assests/family.png";
 
+gsap.registerPlugin(ScrollTrigger);
+
 const Hero = () => {
+  const heroRef = useRef(null);
+  const contentRef = useRef(null);
+
+  useEffect(() => {
+    gsap.fromTo(
+      heroRef.current,
+      { opacity: 0 },
+      {
+        opacity: 1,
+        duration: 1,
+        scrollTrigger: {
+          trigger: heroRef.current,
+          start: "top 80%",
+          end: "bottom 20%",
+          toggleActions: "play none none none",
+        },
+      }
+    );
+    gsap.fromTo(
+      contentRef.current,
+      { y: 50, opacity: 0 },
+      {
+        y: 0,
+        opacity: 1,
+        duration: 1,
+        delay: 0.5,
+        scrollTrigger: {
+          trigger: contentRef.current,
+          start: "top 80%",
+          end: "bottom 20%",
+          toggleActions: "play none none none",
+        },
+      }
+    );
+  }, []);
+
   return (
-    <div className="hero-container">
+    <div className="hero-container" ref={heroRef}>
       <div
         className="hero"
         style={{
@@ -14,11 +54,9 @@ const Hero = () => {
           backgroundPosition: "50%",
           backgroundSize: "cover",
           backgroundRepeat: "no-repeat",
-        
-      
         }}
       >
-        <div className="hero-content">
+        <div className="hero-content" ref={contentRef}>
           <div className="trusted-badge">
             <h3>Your Most Trusted Partners</h3>
           </div>
@@ -30,44 +68,17 @@ const Hero = () => {
               Consulting Here...
             </h1>
           </div>
-         <div classname="content-para">
+         <div className="content-para">
           <p>
-            Transnds is the world's driving worldwide coordination supplier we
-            uphold <br />industry and exchange the worldwide trade of merchandi
+            Transnds is the world's driving worldwide coordination provider we
+            uphold <br />industry and trade in the global exchange of merchandise.
           </p>          
           </div>
           <button className="explore-btn">Explore More →</button>
         </div>
       </div>
-
-      {/* <div className="about-content">
-        <div className="about-content-container">
-          <div className="about-content-left">
-            <div className="blue-box"></div>
-            <div className="orange-border"></div>
-            <div className="image-1">
-              <img src={familyimg} alt="family" />
-            </div>
-            <div className="image-2">
-              <img src={family} alt="family" />
-            </div>
-          </div>
-          <div className="about-content-right">
-            <h3>About company</h3>
-            <p>
-              Welcome to Experience Visa <br />
-              Consulting Firm
-              <br />
-            </p>
-            <h4>
-              Transmds is the world’s driving worldwide <br/>coordinations supplier —
-              we uphold industry and <br/>exchange the worldwide trade of merchandi
-            </h4>
-          </div>
-        </div>
-      </div> */}
     </div>
   );
 };
 
-export default Hero;
+export default React.memo(Hero);
