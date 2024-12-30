@@ -1,12 +1,13 @@
-import React from "react";
-import "./css/OurStories.css"
-import svg1 from "../assests/Luggage.svg"
-import svg2 from "../assests/process.svg"
-import startsvg from "../assests/Star.svg"
-import berifyingsvg from "../assests/briefing.svg"
+import React, { useEffect, useRef } from "react";
+import { gsap } from "gsap";
+import "./css/OurStories.css";
+import svg1 from "../assests/Luggage.svg";
+import svg2 from "../assests/process.svg";
+import startsvg from "../assests/Star.svg";
+import berifyingsvg from "../assests/briefing.svg";
+
 const OurStories = () => {
     const GudaiceData = [
-
         {
             id: 1,
             heading: "20 +",
@@ -14,7 +15,6 @@ const OurStories = () => {
             color: "#FE6C3F",
             img: svg1,
             color2: "#FFF0EB"
-
         },
         {
             id: 2,
@@ -38,22 +38,49 @@ const OurStories = () => {
             img: berifyingsvg,
             color2: "rgba(255, 187, 15, 0.4)"
         }
-    ]
-    return (<>
-        <div className="main-div-guildace-osr-stories">
+    ];
+
+    const mainDivRef = useRef(null);
+    const titleDivRef = useRef(null);
+    const mapItemsRef = useRef([]);
+
+    useEffect(() => {
+        gsap.fromTo(
+            mainDivRef.current,
+            { opacity: 0 },
+            { opacity: 1, duration: 1 }
+        );
+        gsap.fromTo(
+            titleDivRef.current,
+            { y: -50, opacity: 0 },
+            { y: 0, opacity: 1, duration: 1, delay: 0.5 }
+        );
+        gsap.fromTo(
+            mapItemsRef.current,
+            { y: 50, opacity: 0 },
+            { y: 0, opacity: 1, duration: 1, stagger: 0.2, delay: 1 }
+        );
+    }, []);
+
+    return (
+        <div className="main-div-guildace-osr-stories" ref={mainDivRef}>
             <div className="guildace-content-div">
-                <div className="guildace-title-div">
-                    <h2 className="style-text-heading ">Discovering Our Biggest Successes: The Stories
-                        <span className="color-last"><br />   Behind Our Great Achievements</span></h2>
-                    <p className="style-paragraph">Transmds is the world’s driving worldwide coordinations<br />
-                        supplier we uphold industry and exchange the worldwide trade</p>
+                <div className="guildace-title-div" ref={titleDivRef}>
+                    <h2 className="style-text-heading">
+                        Discovering Our Biggest Successes: The Stories
+                        <span className="color-last"><br /> Behind Our Great Achievements</span>
+                    </h2>
+                    <p className="style-paragraph">
+                        Transmds is the world’s driving worldwide coordinations<br />
+                        supplier we uphold industry and exchange the worldwide trade
+                    </p>
                 </div>
                 <div className="map-item-div-ourstories">
                     {GudaiceData.length > 0 ? (
-                        GudaiceData.map((item) => (
-                            <div className="map-items-container-ourstories" key={item.id}>
+                        GudaiceData.map((item, index) => (
+                            <div className="map-items-container-ourstories" key={item.id} ref={el => mapItemsRef.current[index] = el}>
                                 <div style={{ borderLeft: `3px solid ${item.color}` }} className="logo-image-conatainer">
-                                    <div style={{background:`${item.color2}`}} className="rotate-div-content-ourstories">
+                                    <div style={{ background: `${item.color2}` }} className="rotate-div-content-ourstories">
                                         <img src={item.img} alt="logo" />
                                     </div>
                                     <div>
@@ -70,7 +97,7 @@ const OurStories = () => {
             </div>
             <div className="image-div-bag"></div>
         </div>
-    </>)
+    );
 }
 
-export default OurStories
+export default OurStories;

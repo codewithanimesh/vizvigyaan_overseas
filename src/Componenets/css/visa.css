@@ -1,102 +1,181 @@
-.visa-conatiner{
+.visa-container {
     display: flex;
-padding: 64px 36px;
-flex-direction: column;
-align-items: flex-start;
-gap: -384px;
-align-self: stretch;
-width: 100%;
-background: #FFF;
+    padding: 36px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: -384px;
+    align-self: stretch;
+    position: relative;
+    min-height: 90vh;
+    overflow: hidden;
 }
-.visa-content{
-    display: flex
-    ;
-        height: 367px;
-        padding: 64px 0px 64px 64px;
-        align-items: flex-start;
-        flex: 1 0;
-        border-radius: 16px 0px 0px 16px;
-        background: #F7F9FB;
-        width: 85%;
-       
-        margin-top: 64px;
-        margin-left: 34px;
 
+.visa-content {
+    display: flex;
+    /* height: 367px; */
+    padding: 64px 0px 64px 64px;
+    align-items: flex-start;
+    flex: 1 0;
+    border-radius: 16px 0px 0px 16px;
+    background: #F7F9FB;
+    width: 85%;
+    /* margin-top: 64px;
+    margin-left: 34px; */
+    position: absolute;
+    z-index: -10;
 }
-.visa-content h2{
+
+.visa-content h2 {
     color: #414141;
     font-family: Catamaran;
     font-size: 36px;
-    font-style: normal;
     font-weight: 700;
-    line-height: 40px; /* 111.111% */
-   
-    font-family: Catamaran;
-    font-size: 36px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 40px;  
+    line-height: 40px;
 }
-.visa-content br{
+
+.visa-content br {
     color: #F28623;
 }
-.visa-grid{
-    top:-344px;
+
+.visa-grid {
+    /* top: -344px; */
+    position: relative;
+    display: flex;
+    padding: 0px 64px;
+    flex-direction: column;
+    align-items: flex-start;
+    flex-wrap: nowrap;
+    gap: 100px;
+    align-self: stretch;
+}
+
+.visa-grid-item {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    gap: 24px;
+    align-self: stretch;
+    flex-wrap: wrap;
+}
+
+.visa-grid-item-heading {
+    display: flex;
+    width: 354.667px;
+    height: 220px;
+    padding: 32px;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    gap: 10px;
+    border-radius: 16px;
+    border: 1px solid #E4F2F8;
+    background: #FFF;
+    overflow: hidden;
     position: relative;
   
-    display: flex;
-padding: 0px 64px;
-flex-direction: column;
-align-items: flex-start;
-flex-wrap: nowrap;
-gap: 100px;
-align-self: stretch;
 }
-.visa-grid-item{
-    display: flex;
-align-items: center;
-align-content: center;
-gap: 24px;
-align-self: stretch;
-flex-wrap: wrap;
-}
-.visa-grid-item-heading{
-    display: flex;
-width: 425.667px;
-height: 220px;
-padding: 32px;
-flex-direction: column;
-justify-content: flex-end;
-align-items: flex-start;
-gap: 10px;
-border-radius: 16px;
-border: 1px solid #EDF6FA;
-background: #FFF;
-}
-.visa-content-container{
+
+.visa-content-container {
     width: 100%;
     display: flex;
+    overflow: hidden;
 }
-.side-image .img{
-    
+
+.side-image {
+    position: absolute;
+    z-index: -10;
+    right: 0;
+    height: 384px;
+    top: 0;
+}
+
+.side-image .img {
     width: 25%;
     background-color: blue;
     background-repeat: no-repeat;
     object-fit: contain;
-}
-.grid-item-inner-pill{
-    display: flex;
-width: 45.928px;
-;
-transform: rotate(45deg);
-flex-direction: column;
-justify-content: center;
-align-items: flex-end;
-gap: 10px;
-position: relative;
-left: -36px;
-top: -90px;
-border-radius: 35px;
-background: #EDF6FA;;
+    height: 584px;
 
 }
+
+.grid-item-inner-pill {
+    display: flex;
+    width: 122.928px;
+    transform: rotate(45deg);
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    position: absolute;
+    gap: 10px;
+    left: -60px;
+    top: -10px;
+    border-radius: 35px;
+    background: #EDF6FA;
+    padding: 4px;
+   
+}
+
+.heading-visa-div {
+    padding-left: 64px;
+    
+}
+
+
+.new-visa-div {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+@media (max-width: 768px) {
+    .visa-container {
+        padding: 16px;
+    }
+
+    .visa-content {
+        width: 100%;
+        padding: 16px;
+    }
+
+    .visa-content h2 {
+        font-size: 28px;
+    }
+
+    .visa-grid {
+        padding: 0 16px;
+    }
+
+    .visa-grid-item-heading {
+        width: 100%;
+        max-width: 100%;
+        padding: 16px;
+    }
+
+    .side-image img {
+        width: 100%;
+    }
+
+    .heading-visa-div {
+        padding-left: 20x;
+    }
+}
+
+@media (max-width: 1024px) {
+    .visa-content {
+        width: 60%;
+    }
+
+    .visa-grid-item-heading {
+        max-width: 45%;
+    }
+}
+
+@media (min-width: 1025px) {
+    .visa-content {
+        width: 70%;
+    }
+
+    .visa-grid-item-heading {
+        max-width: 300px;
+    }
+}   

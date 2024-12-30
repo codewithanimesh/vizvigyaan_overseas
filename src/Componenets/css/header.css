@@ -1,35 +1,36 @@
 @import url('https://fonts.googleapis.com/css2?family=Catamaran:wght@400;500;600;700&display=swap');
 
-
-
-
-.header{
+.header {
   width: 100%;
   display: flex;
-  border-radius: 0px 34px 0px 0px;
+  /* border-radius: 0px 34px 0px 0px; */
   background: #F68712;
-
+  /* padding: 10px 0; */
+  padding-right: 50px;
 }
 
-  .logo{
-    display: flex;
+.logo {
+  display: flex;
   align-items: center;
   gap: 64px;
+  flex: 1;
 }
+
 .navbar {
-  width: 95%;
+  width: 70% !important;
   display: flex;
-  padding: 8px 8px 8px 100px;
+  padding: 8px 100px;
   justify-content: space-between;
   align-items: center;
-  flex: 1 0 0;
+  flex: 1;
   border-radius: 0px 34px 0px 0px;
-background:#F7F9FB;
+  background: #F7F9FB;
+  padding-right: 10px;
 }
 
 .nav-links {
   display: flex;
-  height: 28px;
+  height: auto;
   justify-content: center;
   align-items: center;
   gap: 20px;
@@ -40,9 +41,7 @@ background:#F7F9FB;
   color: #2C3E50;
   font-family: Catamaran;
   font-size: 20px;
-  font-style: normal;
   font-weight: 600;
-  line-height: normal;
   text-decoration: none;
 }
 
@@ -51,19 +50,14 @@ background:#F7F9FB;
   padding: 10px 24px;
   justify-content: center;
   align-items: center;
-  align-content: center;
-  gap: 10px;
-  flex-wrap: wrap;
   border-radius: 36px 25px 0px 36px;
-background: #00ADEF;
-color: #FFF;
-font-family: Catamaran;
-font-size: 16px;
-font-style: normal;
-font-weight: 600;
-line-height: normal;
-text-decoration: none;
-margin-left:57rem;
+  background: #00ADEF;
+  color: #FFF;
+  font-family: Catamaran;
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none;
+  margin-left: auto;
 }
 
 .mobile-menu-btn {
@@ -71,14 +65,29 @@ margin-left:57rem;
   font-family: Catamaran;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
+  
+  .header{
+    padding-right: 0;
+  }
   .navbar {
     padding: 15px 20px;
+    border-radius: 0px;
+  }
+
+  .logo img {
+    max-width: 150px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  
+  .navbar {
+    padding: 10px 20px;
   }
 
   .mobile-menu-btn {
-    display: block;
-    position: absolute;
+ 
     right: 20px;
     top: 20px;
     background: none;
@@ -90,7 +99,7 @@ margin-left:57rem;
   .nav-links {
     display: none;
     position: absolute;
-    top: 70px;
+    top: 0;
     left: 0;
     right: 0;
     background: #F7F9FB;
@@ -98,11 +107,13 @@ margin-left:57rem;
     height: auto;
     padding: 20px;
     width: 100%;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 0px 0px 10px 10px;
   }
 
   .nav-links.active {
     display: flex;
+    z-index: 100;
   }
 
   .nav-links a {
@@ -118,13 +129,27 @@ margin-left:57rem;
     margin: 10px 0;
   }
 
-  .logo img {
-    max-width: 150px;
+  .logo {
+    justify-content: flex-start;
+    gap: 0;
+  }
+
+  .header-end {
+    display: none;
   }
 }
 
+@media screen and (max-width: 480px) {
+  .nav-links a {
+    font-size: 16px;
+  }
 
-.header-end{
-background: #F68712;
- width: 5%;
+  .nav-linkss a[href="/contact"] {
+    font-size: 14px;
+    padding: 8px 20px;
+  }
+
+  .logo img {
+    max-width: 120px;
+  }
 }
