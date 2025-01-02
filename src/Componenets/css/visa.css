@@ -142,7 +142,7 @@
     }
 
     .visa-grid {
-        padding: 0 16px;
+        padding: 0 0;
     }
 
     .visa-grid-item-heading {
@@ -156,7 +156,7 @@
     }
 
     .heading-visa-div {
-        padding-left: 20x;
+        padding-left: 0;
     }
 }
 

@@ -9,11 +9,13 @@ import globe from "../assests/Globe.svg"
 import phone from "../assests/phone-alt.svg"
 import Email from "../assests/Email.svg"
 import bagpng from "../assests/Rectangle 18.png"
+import { useSelectedCountry } from '../context/selectedcountrycontext';
 
-const FormComponent = ({ countryData }) => {
+const FormComponent = () => {
+    const { SelectedCountry } = useSelectedCountry();
     const [formData, setFormData] = useState({
         name: '',
-        country: '',
+        country: SelectedCountry || '', // If SelectedCountry is set, use it; otherwise, keep it empty
         phone: '',
         email: '',
         message: '',
@@ -122,7 +124,7 @@ const FormComponent = ({ countryData }) => {
                         <div className="form-details-div">
 
                             <div className="main-form-section">
-                                <h3>Migrate To <span style={{ color: "#F68712" }}>{countryData}</span></h3>
+                                <h3>Migrate To <span style={{ color: "#F68712" }}>{SelectedCountry}</span></h3>
                                 <form className="form-style" onSubmit={handleSubmit}>
                                     <div className="input-div name-div">
                                         <p> I am</p>
@@ -141,23 +143,33 @@ const FormComponent = ({ countryData }) => {
 
                                     <div className="input-div name-div">
                                         <p> Wanted to Migrate to</p>
-                                        {countryData?null:<div className="input-container">
-                                            <img src={globe} alt="logo" className="input-logo" />
-                                            <select
-                                                className="select-box"
-                                                name="country"
-                                                value={formData.country}
-                                                onChange={handleChange}
-                                            >
-                                               
+                                        {SelectedCountry ? (
+                                            <div className="input-container">
+                                                <img src={globe} alt="logo" className="input-logo" />
+                                                <input
+                                                    type="text"
+                                                    name="country"
+                                                    value={SelectedCountry} // Automatically fill with SelectedCountry
+                                                    readOnly
+                                                    className="input-box"
+                                                />
+                                            </div>
+                                        ) : (
+                                            <div className="input-container">
+                                                <img src={globe} alt="logo" className="input-logo" />
+                                                <select
+                                                    className="select-box"
+                                                    name="country"
+                                                    value={formData.country}
+                                                    onChange={handleChange}
+                                                >
                                                     <option value="">Select an option</option>
-                                                    <option value="option1">option1</option>
-                                                    <option value="option2">option2</option>
-                                                    <option value="option3">option3</option>
-
-                                                
-                                            </select>
-                                        </div>}
+                                                    <option value="option1">Option 1</option>
+                                                    <option value="option2">Option 2</option>
+                                                    <option value="option3">Option 3</option>
+                                                </select>
+                                            </div>
+                                        )}
                                     </div>
 
                                     <div className="input-div name-div">
@@ -229,6 +241,6 @@ const FormComponent = ({ countryData }) => {
             </div>
         </>
     );
-}
+};
 
 export default FormComponent;

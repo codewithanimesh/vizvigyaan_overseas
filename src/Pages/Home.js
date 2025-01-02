@@ -15,6 +15,7 @@ import Guidance2 from "../Componenets/Guidance2";
 import OurStories from "../Componenets/OurStories";
 import Footer from "../Componenets/Footer";
 import Teams from "../Componenets/Teams";
+import SelectCountry from "../Componenets/selectCountry";
 const Home=()=>{
 return(<>
 <Head/>
@@ -30,8 +31,10 @@ return(<>
 <Clients/>
 <Questions />
 <Countrysupport/>
+<SelectCountry/>
 <NewsLetter/>
 <GetIntouch/>
+
 <Footer/>
 </>)
 }

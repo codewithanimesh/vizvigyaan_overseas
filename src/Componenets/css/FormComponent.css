@@ -1,9 +1,7 @@
+/* Base Styles for Desktop and larger screens */
 .form-details-div {
-    /* width: 60%; */
     display: flex;
     flex-wrap: wrap;
-
-
 }
 
 .form-ditail-div {
@@ -11,35 +9,26 @@
     flex-direction: column;
     align-items: flex-start;
     gap: 24px;
+}
 
-    h5 {
-        color: #F68712;
-        font-family: Inter;
-        font-size: 12px;
-        font-style: normal;
-        font-weight: 600;
-        line-height: normal;
-    }
+.form-ditail-div h5 {
+    color: #F68712;
+    font-family: Inter;
+    font-size: 12px;
+    font-weight: 600;
+}
 
-    h2 {
-        color: #414141;
-        font-family: Catamaran;
-        font-size: 36px;
-        font-style: normal;
-        font-weight: 700;
-        line-height: 40px;
+.form-ditail-div h2 {
+    color: #414141;
+    font-family: Catamaran;
+    font-size: 36px;
+    font-weight: 700;
+}
 
-    }
-
-    p {
-        color: #8B8B8B;
-        font-family: Inter;
-        font-size: 16px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: normal;
-    }
-
+.form-ditail-div p {
+    color: #8B8B8B;
+    font-family: Inter;
+    font-size: 16px;
 }
 
 .contact-details-section {
@@ -47,30 +36,22 @@
     border: 1px solid #E4F2F8;
     background: #FFF;
     display: flex;
-    overflow: hidden;
     flex-direction: column;
-    align-items: flex-start;
     gap: 40px;
     justify-content: space-between;
+}
 
-    h3 {
-        color: #414141;
-        font-family: Catamaran;
-        font-size: 20px;
-        font-style: normal;
-        font-weight: 600;
-        line-height: 26px;
+.contact-details-section h3 {
+    color: #414141;
+    font-family: Catamaran;
+    font-size: 20px;
+    font-weight: 600;
+}
 
-    }
-
-    p {
-        color: #8B8B8B;
-        font-family: Inter;
-        font-size: 16px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: normal;
-    }
+.contact-details-section p {
+    color: #8B8B8B;
+    font-family: Inter;
+    font-size: 16px;
 }
 
 .contact-details-with-logo {
@@ -78,7 +59,6 @@
     flex-direction: column;
     align-items: flex-start;
     gap: 12px;
-    align-self: stretch;
 }
 
 .contact-details-with-logo-under {
@@ -93,16 +73,13 @@
     align-items: center;
     border-radius: 41px;
     background: #F7F9FB;
+}
 
-    h3 {
-        color: #414141;
-        font-family: Inter;
-        font-size: 16px;
-        font-style: normal;
-        font-weight: 600;
-        line-height: 26px;
-
-    }
+.logo-circle h3 {
+    color: #414141;
+    font-family: Inter;
+    font-size: 16px;
+    font-weight: 600;
 }
 
 .main-form-section {
@@ -112,68 +89,53 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: flex-start;
-    align-self: stretch;
     border-radius: 16px 0px 0px 16px;
     border-top: 1px solid #EDF6FA;
     border-bottom: 1px solid #EDF6FA;
     border-left: 1px solid #EDF6FA;
     background: #FFF;
     backdrop-filter: blur(10px);
-
 }
 
 .form-style {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
     gap: 20px;
-    align-self: stretch;
+}
 
+.input-div {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
 
-    .input-div {
-        display: flex;
-        gap: 10px;
-        align-items: center;
-
-        p {
-            color: #8B8B8B;
-            font-family: Inter;
-            font-size: 16px;
-            font-style: normal;
-            font-weight: 500;
-            line-height: normal;
-        }
-    }
+.input-div p {
+    color: #8B8B8B;
+    font-family: Inter;
+    font-size: 16px;
+    font-weight: 500;
 }
 
 .input-container {
     display: flex;
-
     padding: 8px 12px;
-
     align-items: flex-start;
     border-radius: 4px;
     border: 1px solid #EDF6FA;
     gap: 10px;
+}
 
-    input {
-        border: none;
-        outline: none;
-    }
-
-    select {
-        border: none;
-        outline: none;
-    }
+.input-container input,
+.input-container select {
+    border: none;
+    outline: none;
 }
 
 .option-text {
     color: #8B8B8B;
     font-family: Inter;
     font-size: 16px;
-    font-style: normal;
     font-weight: 500;
-    line-height: normal;
 }
 
 .new-input-added {
@@ -185,7 +147,6 @@
     padding: 8px 12px;
     flex-direction: column;
     align-items: flex-start;
-    align-self: stretch;
     border-radius: 4px;
     border: 1px solid #EDF6FA;
 }
@@ -201,9 +162,7 @@
     color: #FFF;
     font-family: Inter;
     font-size: 12px;
-    font-style: normal;
     font-weight: 600;
-    line-height: normal;
     cursor: pointer;
 }
 
@@ -211,9 +170,7 @@
     color: #8B8B8B;
     font-family: Inter;
     font-size: 12px;
-    font-style: normal;
     font-weight: 500;
-    line-height: normal;
 }
 
 .input-checkbox {
@@ -227,18 +184,145 @@
     display: flex;
     padding: 20px;
     flex-direction: column;
-    align-items: flex-start;
     gap: 24px;
-    align-self: stretch;
+}
 
-    button {
-        display: flex;
-        padding: 14px 32px;
-        justify-content: center;
-        align-items: center;
-        border-radius: 8px;
-        border: 1px solid var(--primary-color);
-        background: transparent;
-        color:var(--primary-color) ;
+.new-div-form-content button {
+    display: flex;
+    padding: 14px 32px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    border: 1px solid var(--primary-color);
+    background: transparent;
+    color: var(--primary-color);
+}
+
+
+
+
+@media (max-width: 768px) {
+    .form-details-div {
+        flex-direction: column;
+    }
+
+    .form-ditail-div h2 {
+        font-size: 28px;
+    }
+
+    .form-ditail-div p {
+        font-size: 14px;
+    }
+
+    .contact-details-section {
+        padding: 20px;
+        gap: 20px;
+    }
+
+    .contact-details-with-logo {
+        gap: 10px;
+    }
+
+    .main-form-section {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .form-style {
+        gap: 15px;
+    }
+
+    .input-div p {
+        font-size: 14px;
+    }
+
+    .input-container {
+        padding: 6px 10px;
+    }
+
+    .input-container input,
+    .input-container select {
+        padding: 8px;
+    }
+
+    .input-box-textarea {
+        padding: 6px 10px;
+    }
+
+    .enquery-button {
+        padding: 12px 28px;
+        font-size: 14px;
+    }
+
+    .checkbox-styel {
+        font-size: 10px;
+    }
+
+    .input-checkbox {
+        width: 18px;
+        height: 18px;
+    }
+
+    .new-div-form-content button {
+        padding: 12px 28px;
+    }
+}
+
+
+@media (max-width: 480px) {
+    .form-details-div {
+        flex-direction: column;
+    }
+
+    .form-ditail-div h2 {
+        font-size: 24px;
+    }
+
+    .form-ditail-div p {
+        font-size: 12px;
+    }
+
+    .contact-details-section {
+        padding: 15px;
+        gap: 15px;
+    }
+
+    .main-form-section {
+        width: 100%;
+        padding: 15px;
+    }
+
+    .form-style {
+        gap: 12px;
+    }
+
+    .input-div p {
+        font-size: 12px;
+    }
+
+    .input-container {
+        padding: 5px 8px;
+    }
+
+    .input-box-textarea {
+        padding: 5px 8px;
+    }
+
+    .enquery-button {
+        padding: 10px 24px;
+        font-size: 12px;
+    }
+
+    .checkbox-styel {
+        font-size: 9px;
+    }
+
+    .input-checkbox {
+        width: 15px;
+        height: 15px;
+    }
+
+    .new-div-form-content button {
+        padding: 10px 24px;
     }
 }

@@ -2,8 +2,10 @@ import React, { useState } from "react";
 import logo from "../assests/logo.png";
 import "./css/header.css";
 import { NavLink } from "react-router-dom";
+import { useSelectedCountry } from "../context/selectedcountrycontext";
 
 const Header = () => {
+  const { SelectedCountry } = useSelectedCountry()
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const toggleMenu = () => {
@@ -14,11 +16,19 @@ const Header = () => {
     <div className="header">
       <div className="navbar">
         <div className="logo">
-          <img src={logo} alt="Logo" />
+
+          <NavLink to="/" onClick={toggleMenu}>
+            <img src={logo} alt="Logo" />
+          </NavLink>
           <div className={`nav-links ${isMenuOpen ? "active" : ""}`}>
             <NavLink to="/" onClick={toggleMenu}>
               Home
             </NavLink>
+            <NavLink to="/enquiryform" onClick={toggleMenu}>
+              Form
+            </NavLink>
+
+
             <NavLink to="/admissions" onClick={toggleMenu}>
               Admissions
             </NavLink>

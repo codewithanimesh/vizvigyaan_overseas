@@ -1,0 +1,168 @@
+/* Base Styles for Desktop and larger screens */
+
+.main-MigrateProcess {
+    display: flex;
+    padding: 0px 100px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #FFF;
+    position: relative;
+}
+
+.content-migrate {
+    display: flex;
+    width: 100%;
+    padding: 100px 0px;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 20px;
+    z-index: 2;
+}
+
+.absolute-div-migrate {
+    position: absolute;
+    top: 190px;
+    width: 90%;
+    height: 50%;
+    background: #EDF6FA;
+    border-radius: 15px;
+    z-index: 1;
+}
+
+.map-items-migrate {
+    display: flex;
+    padding: 40px;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    gap: 10px;
+    flex: 1 0 0;
+    border-radius: 16px;
+    border: 1px solid #E4F2F8;
+    background: #FFF;
+}
+
+.logo-container-migrate {
+    display: flex;
+    width: 72px;
+    height: 72px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-shrink: 0;
+    border-radius: 8px;
+    background: #E4F2F8;
+}
+
+.all-content-container-migrate {
+    display: flex;
+    width: 316px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+}
+
+.all-content-container-migrate h3 {
+    color: #414141;
+    font-family: Catamaran;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.all-content-container-migrate p {
+    color: #8B8B8B;
+    font-family: Inter;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+/* Responsive adjustments */
+
+/* For medium screens (tablets and smaller laptops) */
+@media (max-width: 768px) {
+    .main-MigrateProcess {
+        padding: 0px 40px; /* Reduced padding to fit better on smaller screens */
+    }
+
+    .content-migrate {
+        flex-direction: column;
+        padding: 50px 0px; /* Reduced padding */
+    }
+
+    .absolute-div-migrate {
+        top: 150px;
+        height: 40%;
+        width: 100%;
+    }
+
+    .map-items-migrate {
+        min-width: 100%;
+        max-width: 100%;
+        padding: 20px;
+        gap: 15px;
+    }
+
+    .logo-container-migrate {
+        width: 60px;
+        height: 60px;
+    }
+
+    .all-content-container-migrate {
+        width: 100%;
+        gap: 10px;
+    }
+
+    .all-content-container-migrate h3 {
+        font-size: 18px;
+    }
+
+    .all-content-container-migrate p {
+        font-size: 12px;
+    }
+}
+
+/* For very small screens (phones, 480px or smaller) */
+@media (max-width: 480px) {
+    .main-MigrateProcess {
+        padding: 0px 20px;  /* Added more padding for smaller screens */
+    }
+
+    .content-migrate {
+        padding: 30px 0px;
+        flex-direction: column;
+    }
+
+    .absolute-div-migrate {
+        top: 130px;
+        height: 30%;
+        width: 100%;
+    }
+
+    .map-items-migrate {
+        padding: 15px;
+        gap: 10px;
+    }
+
+    .logo-container-migrate {
+        width: 50px;
+        height: 50px;
+    }
+
+    .all-content-container-migrate {
+        width: 100%;
+        gap: 8px;
+    }
+
+    .all-content-container-migrate h3 {
+        font-size: 16px;
+    }
+
+    .all-content-container-migrate p {
+        font-size: 12px;
+    }
+}

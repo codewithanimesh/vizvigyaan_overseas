@@ -77,7 +77,9 @@
 
 
 @media screen and (max-width: 768px) {
-
+.head-container{
+  display: none;
+}
   .head {
     width: 100%;
     padding: 10px 16px;
@@ -115,6 +117,12 @@
     padding: 16px;
     align-items: flex-start;
   }
+}
+
+@media screen and (max-width: 480px){
+.head-container{
+  display: none;
+}
 }
 
 
