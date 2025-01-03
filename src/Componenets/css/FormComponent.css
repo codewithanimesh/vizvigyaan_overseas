@@ -1,4 +1,4 @@
-/* Base Styles for Desktop and larger screens */
+
 .form-details-div {
     display: flex;
     flex-wrap: wrap;
@@ -204,14 +204,21 @@
 @media (max-width: 768px) {
     .form-details-div {
         flex-direction: column;
+        
+    }
+    .form-ditail-div h5{
+        font-size: 30px;
+       margin-bottom: 0;
     }
 
     .form-ditail-div h2 {
         font-size: 28px;
+        margin: 0;
     }
 
     .form-ditail-div p {
         font-size: 14px;
+        margin: 0;
     }
 
     .contact-details-section {
@@ -272,14 +279,17 @@
 @media (max-width: 480px) {
     .form-details-div {
         flex-direction: column;
+        gap:10px
     }
 
     .form-ditail-div h2 {
         font-size: 24px;
+        margin: 0;
     }
 
     .form-ditail-div p {
         font-size: 12px;
+        margin: 0;
     }
 
     .contact-details-section {
@@ -302,6 +312,7 @@
 
     .input-container {
         padding: 5px 8px;
+        align-items: center;
     }
 
     .input-box-textarea {

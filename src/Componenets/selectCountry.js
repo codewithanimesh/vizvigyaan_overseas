@@ -29,7 +29,7 @@ const SelectCountry = () => {
                 { name: "United Kingdom", flag: "https://flagcdn.com/w320/gb.png", visaTypes: ["Tourist", "Work"] }
             ]
         },
-        // Add more regions here
+       
     ];
 
     const [selectedRegion, setSelectedRegion] = useState(countryData[0].region);
@@ -116,16 +116,7 @@ const SelectCountry = () => {
                                 key={country.name}
                                 className={selectedCountry === country.name ? "selected-country select-single-country" : "select-single-country"}
                                 onClick={() => handleCountrySelect(country.name)}
-                                style={{
-                                    display: "flex",
-                                    alignItems: "center",
-                                    padding: "8px",
-                                    cursor: "pointer",
-                                    border: selectedCountry === country.name ? "2px solid #F68712" : "1px solid #ddd",
-                                    margin: "5px 0",
-                                    minWidth: "242px",
-                                    maxWidth:"242.5px"
-                                }}
+
                             >
                                 <img
                                     src={country.flag}

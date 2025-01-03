@@ -86,19 +86,19 @@
         width: 100%;
     }
     .main-Achievements-div {
-        padding: 30px;
+        padding: 20px;
         flex-direction: column;
     }
 
     .achievment-content-div {
         gap: 20px;
-        padding-right: 20px;
+        /* padding-right: 20px; */
     }
 
     .map-items-data-container {
         justify-content: center;
         gap: 20px;
-        padding-right: 20px;
+        /* padding-right: 20px; */
     }
 
     .achievmentdata-map-main-div {
@@ -128,7 +128,7 @@
 
     .achievment-content-div {
         gap: 15px;
-        padding-right: 20px;
+        /* padding-right: 20px; */
     }
 
     .map-items-data-container {

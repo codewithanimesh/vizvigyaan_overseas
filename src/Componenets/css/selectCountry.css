@@ -6,6 +6,7 @@
     gap: 40px;
     align-self: stretch;
     background: #FFF;
+    overflow: hidden;
 }
 
 .selected-country-heading {
@@ -97,7 +98,7 @@
 
 .map-countries-div {
     display: flex;
-    padding: 16px 0px 0px 16px;
+    padding: 16px;
     /* align-items: center; */
     align-content: center;
     gap: 16px;
@@ -106,7 +107,7 @@
     width: 100% !important;
     background-color: #f0f0f0;
     border-radius: 8px;
-   
+
 }
 
 .select-single-country {
@@ -122,6 +123,7 @@
     box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.04);
     cursor: pointer;
 }
+
 .visa-type-filter {
     margin-top: 20px;
     font-size: 16px;
@@ -135,7 +137,7 @@
     padding: 10px;
     border-radius: 8px;
     transition: background-color 0.3s;
-    background-color: #f0f0f0; 
+    background-color: #f0f0f0;
     width: 100%;
 }
 
@@ -199,37 +201,62 @@
     background-color: #F68712;
     color: white;
 }
+
 @media (max-width: 480px) {
-    .main-selected-country-div{
+    .main-selected-country-div {
         padding: 20px;
     }
-    .selected-country-heading{
+
+    .selected-country-heading {
         flex-direction: column;
-       
+
     }
-    .selected-country-heading{
-        gap:10px;
-        h2{
+
+    .selected-country-heading {
+        gap: 10px;
+
+        h2 {
             text-wrap: wrap;
-    
+
             width: 100%;
         }
+    }
+
+    .select-single-country {
+        width: 100% !important;
     }
 }
+
 @media (max-width: 768px) {
-    .main-selected-country-div{
-        padding: 40px;
+    .main-selected-country-div {
+        padding: 20px;
     }
-    .selected-country-heading{
+
+    .selected-country-heading {
         flex-direction: column;
-       
+
     }
-    .selected-country-heading{
-        gap:10px;
-        h2{
+
+    .selected-country-heading {
+        gap: 10px;
+
+        h2 {
             text-wrap: wrap;
-    
+
             width: 100%;
         }
+    }
+
+    .select-single-country {
+        width: 100% !important;
+    }
+
+    .map-countries-div {
+        width: 100% !important;
+    }
+
+    .region-map-div{
+        width: 50% !important;
+        padding: 5px;
     }
 }

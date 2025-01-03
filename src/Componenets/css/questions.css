@@ -8,16 +8,15 @@
 }
 
 .questions-card1 {
-    position: sticky;
-    top: 100px;
     display: flex;
     padding-top: 40px;
     flex-direction: column;
     justify-content: space-between;
     align-items: flex-start;
     flex: 1 0 0;
-    height: fit-content;
+    height: auto; /* Changed from sticky to auto height */
 }
+
 .questions-card1 h3 {
     align-self: stretch;
     color: #414141;
@@ -51,6 +50,7 @@
     flex: 1 0 0;
     overflow: visible;
 }
+
 .questions-card-ser, .questions-card-ser1 {
     display: flex;
     padding: 16px 24px;
@@ -64,6 +64,7 @@
     box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.04);
     position: relative;
     transition: all 0.3s ease;
+    overflow: hidden;
 }
 
 .questions-card-ser h4, .questions-card-ser1 h4 {
@@ -95,3 +96,80 @@
     transition: max-height 0.3s ease-in;
 }
 
+/* Media Queries for responsiveness */
+
+/* For screen sizes smaller than or equal to 768px */
+@media (max-width: 768px) {
+    .questions-container {
+        padding: 20px;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .questions-card1 {
+        padding-top: 20px;
+        height: auto; /* Removed sticky positioning */
+    }
+
+    .questions-card1 h3 {
+        font-size: 28px;
+    }
+
+    .questions-card1 p {
+        width: 100%;
+        font-size: 14px;
+    }
+
+    .questions-card-ser, .questions-card-ser1 {
+        padding: 12px 20px;
+        gap: 16px;
+    }
+
+    .questions-card-ser h4, .questions-card-ser1 h4 {
+        font-size: 14px;
+    }
+
+    .questions-card-ser p, .questions-card-ser1 p {
+        font-size: 12px;
+    }
+
+    .questions-card2 {
+        width: 100%;
+    }
+}
+
+/* For screen sizes smaller than or equal to 480px */
+@media (max-width: 480px) {
+    .questions-container {
+        padding: 20px;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .questions-card1 {
+        padding-top: 20px;
+        height: auto; /* Removed sticky positioning */
+    }
+
+    .questions-card1 h3 {
+        font-size: 24px;
+    }
+
+    .questions-card1 p {
+        width: 100%;
+        font-size: 12px;
+    }
+
+    .questions-card-ser, .questions-card-ser1 {
+        padding: 10px 15px;
+        gap: 12px;
+    }
+
+    .questions-card-ser h4, .questions-card-ser1 h4 {
+        font-size: 12px;
+    }
+
+    .questions-card-ser p, .questions-card-ser1 p {
+        font-size: 10px;
+    }
+}

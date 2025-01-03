@@ -5,6 +5,7 @@ import EnquiryForm from "./Pages/EnquiryForm";
 import Home from "./Pages/Home";
 import { SelectedcountryProvider } from "./context/selectedcountrycontext";
 import ScrollToTop from "./Componenets/ScrollToTop"
+import Contact from "./Pages/Contact";
 const App = () => {
 
   return (<>
@@ -14,6 +15,7 @@ const App = () => {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/enquiryform/:country?" element={<EnquiryForm />} />
+        <Route path="/contact" element={<Contact/>} />
 
       </Routes>
     </BrowserRouter>

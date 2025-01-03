@@ -11,24 +11,24 @@ const Questions = () => {
 
   const questions = [
     {
-      question: "What services do you offers ?",
+      question: "What services do you offer?",
       answer:
-        "Transmds is the world's driving worldwide coordinations supplier we uphold industry and exchange the worldwide trade of merchandi.",
+        "Transmds is the world's leading global logistics provider. We support industry and trade in the global exchange of merchandise.",
     },
     {
-      question: "What services do you offers ?",
+      question: "How does the process work?",
       answer:
-        "Transmds is the world's driving worldwide coordinations supplier we uphold industry and exchange the worldwide trade of merchandi.",
+        "We handle the entire process from documentation to delivery, ensuring smooth transportation and compliance with international regulations.",
     },
     {
-      question: "What services do you offers ?",
+      question: "What are your main markets?",
       answer:
-        "Transmds is the world's driving worldwide coordinations supplier we uphold industry and exchange the worldwide trade of merchandi.",
+        "We serve a wide range of industries including technology, automotive, and manufacturing, across global markets.",
     },
     {
-      question: "What services do you offers ?",
+      question: "How can I track my shipment?",
       answer:
-        "Transmds is the world's driving worldwide coordinations supplier we uphold industry and exchange the worldwide trade of merchandi.",
+        "You can track your shipment in real-time via our online platform or mobile app, which provides updates at every stage of transit.",
     },
   ];
 
@@ -40,8 +40,8 @@ const Questions = () => {
           <span style={{ color: "#F28623" }}>Answer</span>{" "}
         </h3>
         <p>
-          Transmds is the world's driving worldwide coordinations supplier we
-          uphold industry and exchange the worldwide trade of merchandi.
+          Transmds is the world's leading global logistics provider. We support
+          industry and trade in the global exchange of merchandise.
         </p>
         <img
           src={queimg}
@@ -54,15 +54,12 @@ const Questions = () => {
         {questions.map((item, index) => (
           <div
             key={index}
-            className={`questions-card-ser1 ${
-              expandedIndex === index ? "active" : ""
-            }`}
+            className={`questions-card-ser1 ${expandedIndex === index ? "active" : ""}`}
           >
             <h4>{item.question}</h4>
 
-
-            <div 
-              className="design-serv" 
+            <div
+              className="design-serv"
               onClick={() => toggleQuestion(index)}
               style={{
                 display: "flex",
@@ -77,10 +74,10 @@ const Questions = () => {
                 right: "-5.963px",
                 top: "2px",
                 borderRadius: "35px",
-                background: "#EDF6FA"
+                background: "#EDF6FA",
               }}
             >
-              <div 
+              <div
                 className="plus-minus"
                 style={{
                   display: "flex",
@@ -92,22 +89,19 @@ const Questions = () => {
                   justifyContent: "center",
                   alignItems: "center",
                   position: "absolute",
-                 
                   left: "27px",
-                  
-                 
-               
-               
                   gap: "10px",
                   flexShrink: 0,
                   borderRadius: "18px",
                   background: "#FFF",
-                  boxShadow: "0px 0px 10px 0px rgba(0, 0, 0, 0.16)"
+                  boxShadow: "0px 0px 10px 0px rgba(0, 0, 0, 0.16)",
                 }}
               >
                 {expandedIndex === index ? "-" : "+"}
               </div>
             </div>
+
+            {/* The answer paragraph with smooth transition */}
             {expandedIndex === index && <p>{item.answer}</p>}
           </div>
         ))}

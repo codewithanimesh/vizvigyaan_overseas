@@ -15,7 +15,7 @@ const FormComponent = () => {
     const { SelectedCountry } = useSelectedCountry();
     const [formData, setFormData] = useState({
         name: '',
-        country: SelectedCountry || '', // If SelectedCountry is set, use it; otherwise, keep it empty
+        country: SelectedCountry || '', 
         phone: '',
         email: '',
         message: '',
@@ -115,7 +115,7 @@ const FormComponent = () => {
                 <div className="new-visa-div">
                     <div className="heading-visa-div">
                         <div className="form-ditail-div">
-                            <h5>Contact Us</h5>
+                            <h5 >Migrate</h5>
                             <h2>Feel Free to Call Us</h2>
                             <p>Transmds is the world’s driving worldwide coordinations.</p>
                         </div>
