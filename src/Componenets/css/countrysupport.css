@@ -15,7 +15,8 @@
   align-items: flex-end;
   gap: 31px;
   align-self: stretch;
-  width: ;
+  width:100%;
+  justify-content: center;
 }
 
 .card-img1 {
@@ -121,7 +122,7 @@ card-img1 {
 
 .country-support-container {
   width: 100%;
-  margin-right: 400px;
+ 
 }
 
 .country-support1 {
@@ -150,3 +151,64 @@ card-img1 {
   top: 180px;
 }
 
+/* Add these media queries at the end of the file */
+
+@media screen and (max-width: 768px) {
+  .country-support-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .card-text {
+    min-width: 90%;
+    max-width: 100%;
+    padding: 0 20px;
+  }
+
+  .card-text h3 {
+    font-size: 28px;
+    line-height: 32px;
+  }
+
+  .country-support .country-support-container2 {
+    width: 90%;
+    height: auto;
+    left: 20px;
+    top: 150px;
+  }
+
+  .country-support1 {
+    height: auto;
+    padding: 20px 0;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .card-img1 {
+    width: 100%;
+    max-width: 295px;
+  }
+
+  .card-img1 img {
+    width: 100%;
+  }
+
+  .card-text {
+    padding: 0 15px;
+  }
+
+  .card-text h3 {
+    font-size: 24px;
+    line-height: 28px;
+  }
+
+  .card-text p {
+    font-size: 14px;
+  }
+
+  .country-support .country-support-container2 {
+    width: 85%;
+    left: 15px;
+  }
+}

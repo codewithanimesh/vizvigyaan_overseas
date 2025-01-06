@@ -90,3 +90,84 @@ border: 1px solid #E4F2F8;
 background: #FFF;
 
 }
+@media screen and (max-width: 768px) {
+  .main-div-conatiner {
+    margin-top: 40px;
+    padding: 0px 20px;
+  }
+
+  .newsletter-container {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .newsletter-heading {
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+    align-items: center;
+  }
+
+  .newsletter-heading h2 {
+    width: 100%;
+    font-size: 11px;
+  }
+
+  .newsletter-heading p {
+    font-size: 18px;
+    text-align: center;
+  }
+
+  .newsletter-form {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .newsletter-form input {
+    margin-right: 0;
+    width: 100%;
+  }
+
+  .newsletter-image {
+    margin-top: 20px;
+  }
+
+  .newsletter-image img {
+    width: 100%;
+    max-width: 140px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .main-div-conatiner {
+    margin-top: 30px;
+    padding: 0px 15px;
+  }
+
+  .newsletter-container {
+    padding: 15px;
+  }
+
+  .newsletter-heading {
+    padding: 15px;
+  }
+
+  .newsletter-heading h2 {
+    font-size: 10px;
+  }
+
+  .newsletter-heading p {
+    font-size: 16px;
+    line-height: 22px;
+  }
+
+  .newsletter-form input,
+  .newsletter-form button {
+    padding: 12px 15px;
+    font-size: 14px;
+  }
+
+  .newsletter-image img {
+    max-width: 120px;
+  }
+}

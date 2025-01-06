@@ -2,8 +2,10 @@ import React, { useState } from "react";
 import logo from "../assests/logo.png";
 import "./css/header.css";
 import { NavLink } from "react-router-dom";
+import { useSelectedCountry } from "../context/selectedcountrycontext";
 
 const Header = () => {
+  const { SelectedCountry } = useSelectedCountry();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const toggleMenu = () => {
@@ -14,10 +16,19 @@ const Header = () => {
     <div className="header">
       <div className="navbar">
         <div className="logo">
-          <img src={logo} alt="Logo" />
+          <NavLink to="/" onClick={toggleMenu}>
+            <img src={logo} alt="Logo" />
+          </NavLink>
+
           <div className={`nav-links ${isMenuOpen ? "active" : ""}`}>
             <NavLink to="/" onClick={toggleMenu}>
               Home
+            </NavLink>
+            <NavLink to="/enquiryform" onClick={toggleMenu}>
+              Form
+            </NavLink>
+            <NavLink to="/aboutus" onClick={toggleMenu}>
+              About Us
             </NavLink>
             <NavLink to="/admissions" onClick={toggleMenu}>
               Admissions
@@ -34,14 +45,14 @@ const Header = () => {
             <NavLink to="/visa" onClick={toggleMenu}>
               Visa
             </NavLink>
+            <NavLink className="new-link" to="/contact" onClick={toggleMenu}>
+              Contact
+            </NavLink>
           </div>
         </div>
 
-        <button className="mobile-menu-btn" onClick={toggleMenu}>
-          {isMenuOpen ? "✕" : "☰"}
-        </button>
-
-        <div className={`nav-linkss ${isMenuOpen ? "active" : ""}`}>
+        {/* "Contact Us" Button - This will be visible on Desktop */}
+        <div className="nav-linkss">
           <NavLink to="/contact" onClick={toggleMenu}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -58,7 +69,13 @@ const Header = () => {
             Contact Us
           </NavLink>
         </div>
+
+        {/* Hamburger Menu Button */}
+        <button className="mobile-menu-btn" onClick={toggleMenu}>
+          {isMenuOpen ? "✕" : "☰"}
+        </button>
       </div>
+
       <div className="header-end"></div>
     </div>
   );
