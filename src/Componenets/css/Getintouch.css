@@ -124,6 +124,15 @@ color: #FFF;
 }
 
 @media screen and (max-width: 768px) {
+  .form-input{
+    width: 100%;
+  }
+  .form-input1{
+    width: 100%;
+  }
+  .send-message-btn{
+    width: 100%;
+  }
     .get-in-touch-container {
       padding: 50px 20px 10px 20px;
     }
@@ -150,6 +159,7 @@ color: #FFF;
     .form-input-container {
       flex-direction: column;
       width: 100%;
+      align-items: start;
     }
   
     .get-in-touch-map {
@@ -185,6 +195,7 @@ color: #FFF;
     .form-input-container .form-input1 {
       padding: 12px 15px;
       font-size: 14px;
+      width: 100%;
     }
   
     .form-input-container .form-input1 {

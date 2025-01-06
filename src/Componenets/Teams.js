@@ -69,7 +69,7 @@ const Teams = () => {
       </div>
 
       <div className="team-grid">
-        <div className="team-card">
+        <div className="team-card2">
           {teamMembers.slice(2).map((member, index) => (
             <TeamCard key={`team-2-${index}`} {...member} ref={el => teamCardsRef.current[index + 2] = el} />
           ))}

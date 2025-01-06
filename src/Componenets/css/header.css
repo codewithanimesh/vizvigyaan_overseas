@@ -5,6 +5,7 @@
   display: flex;
   background: #F68712;
   padding-right: 50px;
+  box-sizing: border-box;
 }
 
 .logo {
@@ -29,10 +30,11 @@
 .nav-links {
   display: flex;
   height: auto;
-  justify-content: center;
+  justify-content: start;
   align-items: center;
   gap: 20px;
   font-family: Catamaran;
+  flex-wrap: wrap;
 }
 
 .nav-links a {
@@ -87,15 +89,17 @@
 
 @media screen and (max-width: 768px) {
   .navbar {
-    padding: 10px 20px;
+    padding:  20px;
+    width: 100%;
   }
 
   .mobile-menu-btn {
-    display: block; /* Make the menu button visible on mobile */
+    display: block; 
     right: 20px;
     top: 20px;
     font-size: 24px;
-    z-index: 100; /* Ensure it's clickable */
+    z-index: 100; 
+    margin: 0;
   }
 
   .nav-links {
@@ -143,6 +147,9 @@
 }
 
 @media screen and (max-width: 480px) {
+  .navbar{
+    width: 100%;
+  }
   .nav-links a {
     font-size: 16px;
   }

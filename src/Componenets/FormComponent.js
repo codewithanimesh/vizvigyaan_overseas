@@ -1,26 +1,40 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import sideimg from "../assests/side-img.jpeg";
-import "./css/FormComponent.css"
-import girlpic from "../assests/Rectangle 4 (1).png"
-import callsvg from "../assests/Call.svg"
-import mailsvg from "../assests/mail.svg"
-import person from "../assests/Page-1.svg"
-import globe from "../assests/Globe.svg"
-import phone from "../assests/phone-alt.svg"
-import Email from "../assests/Email.svg"
-import bagpng from "../assests/Rectangle 18.png"
+import "./css/FormComponent.css";
+import girlpic from "../assests/Rectangle 4 (1).png";
+import callsvg from "../assests/Call.svg";
+import mailsvg from "../assests/mail.svg";
+import person from "../assests/Page-1.svg";
+import globe from "../assests/Globe.svg";
+import phone from "../assests/phone-alt.svg";
+import Email from "../assests/Email.svg";
+import bagpng from "../assests/Rectangle 18.png";
+import { countriesData } from '../countries/countriesData';
 import { useSelectedCountry } from '../context/selectedcountrycontext';
 
 const FormComponent = () => {
-    const { SelectedCountry } = useSelectedCountry();
+    const { SelectedCountry, SelectedType } = useSelectedCountry();
+    
+    
     const [formData, setFormData] = useState({
         name: '',
-        country: SelectedCountry || '', 
+        country: SelectedCountry || '',
         phone: '',
         email: '',
         message: '',
         termsAccepted: false,
+        goFor: SelectedType || ''  
     });
+
+    useEffect(() => {
+       
+        if (SelectedType) {
+            setFormData(prevFormData => ({
+                ...prevFormData,
+                goFor: SelectedType
+            }));
+        }
+    }, [SelectedType]); 
 
     const handleChange = (e) => {
         const { name, value, type, checked } = e.target;
@@ -32,7 +46,7 @@ const FormComponent = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        console.log(formData);
+        console.log(formData);  
     };
 
     return (
@@ -40,59 +54,7 @@ const FormComponent = () => {
             <div className="visa-container">
                 <div className="visa-content-container">
                     <div className="visa-content">
-                        <div
-                            style={{
-                                width: "51.564px",
-                                height: "237.652px",
-                                transform: "rotate(42.63deg)",
-                                position: "relative",
-                                right: "128.11px",
-                                left: "228px",
-                                top: "-166.19px",
-                                borderRadius: "51px",
-                                background: "#FFF",
-                            }}
-                        ></div>
-                        <div
-                            style={{
-                                width: "51.564px",
-                                height: "237.652px",
-                                transform: "rotate(42.63deg)",
-                                position: "relative",
-                                right: "127.11px",
-                                left: "200px",
-                                top: "-89.19px",
-                                borderRadius: "51px",
-                                background: "#E4F2F8"
-                            }}
-                        ></div>
-                        <div
-                            style={{
-                                width: "51.564px",
-                                height: "237.652px",
-                                transform: "rotate(42.63deg)",
-                                position: "relative",
-                                right: "5.806px",
-                                top: "-118.475px",
-                                left: "270px",
-                                borderRadius: "51px",
-                                background: "#FFF"
-                            }}
-                        ></div>
-                        <div
-                            style={{
-                                width: "51.564px",
-                                height: "237.652px",
-                                transform: "rotate(42.63deg)",
-                                position: "relative",
-                                right: "174.11px",
-                                left: "53px",
-                                bottom: "-15.417px",
-                                top: "60px",
-                                borderRadius: "51px",
-                                background: "#E4F2F8"
-                            }}
-                        ></div>
+                
                     </div>
 
                     <div className="side-image">
@@ -107,7 +69,8 @@ const FormComponent = () => {
                                 background: "url(" + sideimg + ") lightgray 50% / cover no-repeat",
                                 position: "relative",
                                 marginTop: "64px",
-                                top: "-20px"
+                                top: "-20px",
+                                zIndex: "2"
                             }}
                         />
                     </div>
@@ -115,16 +78,20 @@ const FormComponent = () => {
                 <div className="new-visa-div">
                     <div className="heading-visa-div">
                         <div className="form-ditail-div">
-                            <h5 >Migrate</h5>
+                            <h5>Migrate</h5>
                             <h2>Feel Free to Call Us</h2>
-                            <p>Transmds is the world’s driving worldwide coordinations.</p>
+                            <p>Transmds is the world’s leading global logistics company.</p>
                         </div>
                     </div>
                     <div className="visa-grid">
                         <div className="form-details-div">
 
                             <div className="main-form-section">
-                                <h3>Migrate To <span style={{ color: "#F68712" }}>{SelectedCountry}</span></h3>
+                                {SelectedCountry && (
+                                    <h3>
+                                        {SelectedType} To <span style={{ color: "#F68712" }}>{SelectedCountry}</span>
+                                    </h3>
+                                )}
                                 <form className="form-style" onSubmit={handleSubmit}>
                                     <div className="input-div name-div">
                                         <p> I am</p>
@@ -137,6 +104,7 @@ const FormComponent = () => {
                                                 placeholder="Enter Your Full Name"
                                                 className="input-box"
                                                 onChange={handleChange}
+                                                required
                                             />
                                         </div>
                                     </div>
@@ -149,9 +117,10 @@ const FormComponent = () => {
                                                 <input
                                                     type="text"
                                                     name="country"
-                                                    value={SelectedCountry} // Automatically fill with SelectedCountry
+                                                    value={SelectedCountry} 
                                                     readOnly
                                                     className="input-box"
+                                                    required
                                                 />
                                             </div>
                                         ) : (
@@ -163,10 +132,12 @@ const FormComponent = () => {
                                                     value={formData.country}
                                                     onChange={handleChange}
                                                 >
-                                                    <option value="">Select an option</option>
-                                                    <option value="option1">Option 1</option>
-                                                    <option value="option2">Option 2</option>
-                                                    <option value="option3">Option 3</option>
+                                                    <option value="">Select a Country</option>
+                                                    {countriesData?.map((country, index) => (
+                                                        <option key={index} value={country.name}>
+                                                            {country.name} <img src={country.flag} alt={`${country.name} flag`} style={{ width: '20px', marginLeft: '8px' }} />
+                                                        </option>
+                                                    ))}
                                                 </select>
                                             </div>
                                         )}
@@ -198,6 +169,7 @@ const FormComponent = () => {
                                                 placeholder="Enter Your Email"
                                                 className="input-box"
                                                 onChange={handleChange}
+                                                required
                                             />
                                         </div>
                                     </div>

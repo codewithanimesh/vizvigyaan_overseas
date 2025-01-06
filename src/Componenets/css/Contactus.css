@@ -14,6 +14,7 @@
     border-radius: 16px 0px 0px 16px;
     border: 1px solid #E4F2F8;
     background: #FFF;
+    z-index: 20;
 }
 
 .main-form-section-contactus {
@@ -157,6 +158,9 @@
     display: none;
 }
 @media screen and (max-width: 768px) {
+    .contacu-us-section{
+        width: 100%;
+    }
     .row-two-input-divs{
         flex-direction: column;
     }

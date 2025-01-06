@@ -3,14 +3,15 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import heroimg from "../assests/heroimg.jpeg";
 import "./css/hero.css";
-import familyimg from "../assests/familyImg.png";
-import family from "../assests/family.png";
-
+import { useNavigate } from "react-router-dom";
+import { useSelectedCountry } from "../context/selectedcountrycontext";
 gsap.registerPlugin(ScrollTrigger);
 
 const Hero = () => {
   const heroRef = useRef(null);
   const contentRef = useRef(null);
+  const navigate = useNavigate();
+  const { SetSelectedCountry,SetSelectedType } = useSelectedCountry();
 
   useEffect(() => {
     gsap.fromTo(
@@ -45,6 +46,15 @@ const Hero = () => {
     );
   }, []);
 
+  const navidatetoForm = (item) => {
+    console.log("itemm", item);
+    SetSelectedCountry(null)
+    SetSelectedType(item);
+    navigate("/enquiryform");
+  };
+
+  const visittypedata = ["Work", "Study", "Migrate", "Travel"];
+
   return (
     <div className="hero-container" ref={heroRef}>
       <div
@@ -56,11 +66,24 @@ const Hero = () => {
           backgroundRepeat: "no-repeat",
         }}
       >
+        <div className="visit-type-map">
+          {visittypedata.map((item, index) => {
+            return (
+              <div
+                key={index}
+                className="per-item-of-visit-data"
+                onClick={() => navidatetoForm(item)} 
+              >
+                {item}
+              </div>
+            );
+          })}
+        </div>
+
         <div className="hero-content" ref={contentRef}>
           <div className="trusted-badge">
             <h3>Your Most Trusted Partners</h3>
           </div>
-          
           <div className="hero-content-heading">
             <h1>
               Immigration & Visa
@@ -68,11 +91,11 @@ const Hero = () => {
               Consulting Here...
             </h1>
           </div>
-         <div className="content-para">
-          <p>
-            Transnds is the world's driving worldwide coordination provider we
-            uphold <br />industry and trade in the global exchange of merchandise.
-          </p>          
+          <div className="content-para">
+            <p>
+              Transnds is the world's leading global coordination provider. We
+              support industry and trade in the global exchange of goods.
+            </p>
           </div>
           <button className="explore-btn">Explore More →</button>
         </div>

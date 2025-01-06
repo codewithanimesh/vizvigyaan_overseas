@@ -31,10 +31,9 @@ const Countrysupport = () => {
       <div className="country-support-container">
         <div
           style={{
-           
             display: "flex",
-            justifyContent: "center",
-            
+            justifyContent: "space-between",
+            alignItems:"center",
             gap: "40px",
           }}
         >
@@ -60,17 +59,20 @@ const Countrysupport = () => {
           style={{
       
             display: "flex",
-            justifyContent: "center",
-            
+            // justifyContent: "start",
             gap: "40px",
           }}
         >
+          <div className="support-coinatiner">
           {bottomCountries.map((country, index) => (
+            
             <CountryCard key={index} {...country} />
+            
           ))}
+          </div>
         </div>
       </div>
-      <div className="country-support-container2"></div>
+      {/* <div className="country-support-container2"></div> */}
     </div>
   );
 };

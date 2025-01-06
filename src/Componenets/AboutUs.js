@@ -1,9 +1,22 @@
-import React from "react";
+import React, { useState } from "react";
+import "./css/AboutUs.css"
 import "../Componenets/css/AboutUs.css";
 import heroimg from "../assests/heroimg.jpeg";
 import Head from "../Componenets/Head";
 import Header from "../Componenets/Header";
 import aboutusimg from "../assests/aboutusimg.jpeg";
+import Teams from "../Componenets/Teams"
+import Footer from "./Footer";
+import girlpic from "../assests/Rectangle 4 (1).png"
+import callsvg from "../assests/Call.svg"
+import mailsvg from "../assests/mail.svg"
+import person from "../assests/Page-1.svg"
+import globe from "../assests/Globe.svg"
+import phone from "../assests/phone-alt.svg"
+import Email from "../assests/Email.svg"
+import bagpng from "../assests/Rectangle 18.png"
+import { useSelectedCountry } from '../context/selectedcountrycontext';
+import sideimg from "../assests/side-img.jpeg";
 const AboutUs = () => {
   const cardData = [
     { count: "30k+", text: "we have worked with clients" },
@@ -25,52 +38,154 @@ const AboutUs = () => {
     </svg>
   );
 
-  return (
-    <>
-      <Head />
-      <Header />
-      <div className="aboutus-main-container">
-        <div className="aboutus-heading">
-          <div className="aboutus-heading-text">
-            <p>About us</p>
-            <h2>Committed to Your Visa</h2>
-            <h3>
-              Transmds is the world's driving worldwide <br />
-              coordinations
-            </h3>
+
+  const { SelectedCountry } = useSelectedCountry();
+  const [formData, setFormData] = useState({
+    name: '',
+    country: SelectedCountry || '',
+    phone: '',
+    email: '',
+    message: '',
+    termsAccepted: false,
+  });
+
+  const handleChange = (e) => {
+    const { name, value, type, checked } = e.target;
+    setFormData({
+      ...formData,
+      [name]: type === 'checkbox' ? checked : value
+    });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log(formData);
+  };
+
+  const FirstContainer = () => {
+    return (<>
+      <div className="visa-container">
+        <div className="visa-content-container">
+          <div className="visa-content">
+            <div
+              style={{
+                width: "51.564px",
+                height: "237.652px",
+                transform: "rotate(42.63deg)",
+                position: "relative",
+                right: "128.11px",
+                left: "328px",
+                top: "-166.19px",
+                borderRadius: "51px",
+                background: "#FFF",
+              }}
+            ></div>
+            <div
+              style={{
+                width: "51.564px",
+                height: "237.652px",
+                transform: "rotate(42.63deg)",
+                position: "relative",
+                right: "127.11px",
+                left: "300px",
+                top: "-89.19px",
+                borderRadius: "51px",
+                background: "#E4F2F8"
+              }}
+            ></div>
+            <div
+              style={{
+                width: "51.564px",
+                height: "237.652px",
+                transform: "rotate(42.63deg)",
+                position: "relative",
+                right: "5.806px",
+                top: "-118.475px",
+                left: "370px",
+                borderRadius: "51px",
+                background: "#FFF"
+              }}
+            ></div>
+            <div
+              style={{
+                width: "51.564px",
+                height: "237.652px",
+                transform: "rotate(42.63deg)",
+                position: "relative",
+                right: "174.11px",
+                left: "153px",
+                bottom: "-15.417px",
+                top: "60px",
+                borderRadius: "51px",
+                background: "#E4F2F8"
+              }}
+            ></div>
           </div>
-          <div className="heading-img">
-            <img src={heroimg} alt="hero" />
+
+          <div className="side-image">
+            <img
+              src={girlpic}
+              alt="side image"
+              style={{
+                width: "537px",
+                height: "584px",
+                marginRight: "34px",
+                borderRadius: "16px",
+                background: "url(" + sideimg + ") lightgray 50% / cover no-repeat",
+                position: "relative",
+                marginTop: "64px",
+                top: "-20px"
+              }}
+            />
           </div>
         </div>
-        <div className="card-conatiner">
-          <div className="card-row">
-            {cardData.map((card, index) => (
-              <div className="card" key={index}>
-                <h2>{card.count}</h2>
-                <div className="circle-container">
-                  <Circle />
-                  <Circle />
-                  <Circle />
+        <div className="new-visa-div">
+          <div className="heading-visa-div">
+            <div className="form-ditail-div">
+              <h5 >About Us</h5>
+              <h2>Feel Free to Call Us</h2>
+              <p>Transmds is the world’s driving worldwide coordinations.</p>
+            </div>
+          </div>
+          <div className="card-conatiner">
+            <div className="card-row">
+              {cardData.map((card, index) => (
+                <div className="card" key={index}>
+                  <h2>{card.count}</h2>
+                  <div className="circle-container">
+                    <Circle />
+                    <Circle />
+                    <Circle />
+                  </div>
+                  <p>{card.text}</p>
                 </div>
-                <p>{card.text}</p>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
         </div>
-        <div classname="aboutus-remaining-container">
+      </div>
+    </>)
+  }
+
+
+  const SecondContainer = () => {
+    return (<>
+      <div className="aboutus-main-container">
+
+
+        <div className="aboutus-remaining-container">
           <div className="aboutus-remaining-text-img-container">
             <div className="aboutus-remaining-text">
               <h2>
                 Dependable and Trustworthy Visa & <br />
-                <span style={{color: "#F28623"}}>Immigration Guidance</span>              </h2>
+                <span style={{ color: "#F28623" }}>Immigration Guidance</span>              </h2>
               <p>
                 Transmds is the world’s driving worldwide coordinations supplier
                 we uphold industry and <br /> exchange the worldwide trade. Transmds is
                 the world’s driving worldwide coordinations <br />supplier we uphold
                 industry and exchange the worldwide trade of merchandi. Transmds
                 is <br />
-                 the world’s driving worldwide coordinations supplier we
+                the world’s driving worldwide coordinations supplier we
                 uphold industry and exchange the <br /> worldwide trade of merchandi.
               </p>
             </div>
@@ -79,9 +194,44 @@ const AboutUs = () => {
             </div>
           </div>
 
-          <div></div>
+
+          <div className="aboutus-remaining-text-img-container">
+            <div className="aboutus-img">
+              <img src={aboutusimg} alt="aboutusimg" />
+            </div>
+            <div className="aboutus-remaining-text">
+              <h2>
+                Dependable and Trustworthy Visa & <br />
+                <span style={{ color: "#F28623" }}>Immigration Guidance</span>              </h2>
+              <p>
+                Transmds is the world’s driving worldwide coordinations supplier
+                we uphold industry and <br /> exchange the worldwide trade. Transmds is
+                the world’s driving worldwide coordinations <br />supplier we uphold
+                industry and exchange the worldwide trade of merchandi. Transmds
+                is <br />
+                the world’s driving worldwide coordinations supplier we
+                uphold industry and exchange the <br /> worldwide trade of merchandi.
+              </p>
+            </div>
+
+          </div>
+
+
+
+
         </div>
       </div>
+    </>)
+  }
+
+  return (
+    <>
+      <Head />
+      <Header />
+      <FirstContainer />
+      <SecondContainer />
+      <Teams />
+      <Footer />
     </>
   );
 };

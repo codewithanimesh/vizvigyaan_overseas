@@ -19,7 +19,7 @@ const Visa = () => {
               transform: "rotate(42.63deg)",
               position: "relative",
               right: "128.11px",
-              left:"228px",
+              left:"328px",
               top: "-166.19px",
               borderRadius: "51px",
               background: "#FFF",
@@ -32,7 +32,7 @@ const Visa = () => {
               transform: "rotate(42.63deg)",
               position: "relative",
               right: "127.11px",
-              left:"200px",
+              left:"300px",
               top: "-89.19px",
               borderRadius: "51px",
               background: "#E4F2F8"
@@ -46,7 +46,7 @@ const Visa = () => {
               position: "relative",
               right: "5.806px",
               top: "-118.475px",
-              left:"270px",
+              left:"370px",
               borderRadius: "51px",
               background: "#FFF"
             }}
@@ -58,7 +58,7 @@ const Visa = () => {
               transform: "rotate(42.63deg)",
               position: "relative",
               right: "174.11px",
-              left:"53px",
+              left:"153px",
               bottom: "-15.417px",
               top:"60px",
               borderRadius: "51px",

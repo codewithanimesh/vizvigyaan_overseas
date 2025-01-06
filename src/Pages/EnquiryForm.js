@@ -6,7 +6,17 @@ import Achievements from "../Componenets/Achievements";
 import MigrateProcess from "../Componenets/MigrateProcess";
 import Footer from "../Componenets/Footer"
 import SelectCountry from "../Componenets/selectCountry";
+import { useNavigate } from "react-router-dom";
 const EnquiryForm = () => {
+    const navigate = useNavigate();
+
+    // const handleReloadAndNavigate = () => {
+    //   window.location.reload(); 
+    //   navigate("/");  
+    // };
+    // useEffect(()=>{
+    //     handleReloadAndNavigate()
+    // },[])
 
     return (<>
         <div>
@@ -15,8 +25,8 @@ const EnquiryForm = () => {
             <FormComponent />
             <Achievements />
             <MigrateProcess />
-           <SelectCountry/>
-           <Footer/>
+            {/* <SelectCountry /> */}
+            <Footer />
         </div>
 
     </>)

@@ -86,7 +86,7 @@
 /* For medium screens (tablets and smaller laptops) */
 @media (max-width: 768px) {
     .main-MigrateProcess {
-        padding: 0px 40px; /* Reduced padding to fit better on smaller screens */
+        padding: 0px 20px; /* Reduced padding to fit better on smaller screens */
     }
 
     .content-migrate {

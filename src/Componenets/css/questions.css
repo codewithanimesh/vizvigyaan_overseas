@@ -1,175 +1,203 @@
 .questions-container {
-  display: flex;
-  padding: 100px;
-  align-items: flex-start;
-  gap: 100px;
-  align-self: stretch;
-  background: #FFF;
+    display: flex;
+    padding: 100px;
+    align-items: flex-start;
+    gap: 100px;
+    align-self: stretch;
+    background: #FFF;
 }
 
 .questions-card1 {
-  display: flex;
-  padding-top: 40px;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: flex-start;
-  flex: 1 0 0;
-  height: auto; /* Changed from sticky to auto height */
+    display: flex;
+    padding-top: 40px;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex: 1 0 0;
+    height: auto;
+    /* Changed from sticky to auto height */
 }
 
 .questions-card1 h3 {
-  align-self: stretch;
-  color: #414141;
-  font-family: Catamaran;
-  font-size: 36px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 40px;
+    align-self: stretch;
+    color: #414141;
+    font-family: Catamaran;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 40px;
 }
 
 .questions-card1 p {
-  width: 434px;
-  color: #8B8B8B;
-  font-family: Inter;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
+    width: 434px;
+    color: #8B8B8B;
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
 }
 
 .questions-card1 .img {
-  width: 273px;
-  height: 224px;
+    width: 273px;
+    height: 224px;
 }
 
 .questions-card2 {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 16px;
-  flex: 1 0 0;
-  overflow: visible;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    flex: 1 0 0;
+    overflow: visible;
 }
 
-.questions-card-ser, .questions-card-ser1 {
-  display: flex;
-  padding: 16px 24px;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  gap: 24px;
-  align-self: stretch;
-  border-radius: 8px;
-  border: 1px solid #E4F2F8;
-  box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.04);
-  position: relative;
-  transition: all 0.3s ease;
-  overflow: hidden;
+.questions-card-ser,
+.questions-card-ser1 {
+    display: flex;
+    padding: 16px 24px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 24px;
+    align-self: stretch;
+    border-radius: 8px;
+    border: 1px solid #E4F2F8;
+    box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.04);
+    position: relative;
+    transition: all 0.3s ease;
+    overflow: hidden;
 }
 
-.questions-card-ser h4, .questions-card-ser1 h4 {
-  color: #414141;
-  font-family: Catamaran;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: normal;
+.questions-card-ser h4,
+.questions-card-ser1 h4 {
+    color: #414141;
+    font-family: Catamaran;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
 }
 
-.questions-card-ser p, .questions-card-ser1 p {
-  align-self: stretch;
-  color: #8B8B8B;
-  font-family: Inter;
-  font-size: 14px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.3s ease-out;
-  margin: 0;
+.questions-card-ser p,
+.questions-card-ser1 p {
+    align-self: stretch;
+    color: #8B8B8B;
+    font-family: Inter;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+    margin: 0;
 }
 
 .questions-card-ser1.active p {
-  max-height: 200px;
-  margin-top: 10px;
-  transition: max-height 0.3s ease-in;
+    max-height: 200px;
+    margin-top: 10px;
+    transition: max-height 0.3s ease-in;
 }
 
-/* Media Queries for responsiveness */
+.questions-card-ser p {
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-out, opacity 0.3s ease-out;
+    margin: 0;
+}
 
-/* For screen sizes smaller than or equal to 768px */
+.questions-card-ser1.active p {
+    max-height: 200px;
+    /* or adjust as per the content height */
+    opacity: 1;
+    transition: max-height 0.5s ease-in, opacity 0.3s ease-in;
+}
+
+@media (max-width: 1000px) {
+    .questions-container {
+        gap:10px;
+    }
+}
+
 @media (max-width: 768px) {
-  .questions-container {
-      padding: 20px;
-      flex-direction: column;
-      gap: 20px;
-  }
+    .questions-container {
+        padding: 20px;
+        flex-direction: column;
+        gap: 20px;
+    }
 
-  .questions-card1 {
-      padding-top: 20px;
-      height: auto; /* Removed sticky positioning */
-  }
+    .questions-card1 {
+        padding-top: 20px;
+        height: auto;
+        /* Removed sticky positioning */
+    }
 
-  .questions-card1 h3 {
-      font-size: 28px;
-  }
+    .questions-card1 h3 {
+        font-size: 28px;
+    }
 
-  .questions-card1 p {
-      width: 100%;
-      font-size: 14px;
-  }
+    .questions-card1 p {
+        width: 100%;
+        font-size: 14px;
+    }
 
-  .questions-card-ser, .questions-card-ser1 {
-      padding: 12px 20px;
-      gap: 16px;
-  }
+    .questions-card-ser,
+    .questions-card-ser1 {
+        padding: 12px 20px;
+        gap: 16px;
+    }
 
-  .questions-card-ser h4, .questions-card-ser1 h4 {
-      font-size: 14px;
-  }
+    .questions-card-ser h4,
+    .questions-card-ser1 h4 {
+        font-size: 14px;
+    }
 
-  .questions-card-ser p, .questions-card-ser1 p {
-      font-size: 12px;
-  }
+    .questions-card-ser p,
+    .questions-card-ser1 p {
+        font-size: 12px;
+    }
 
-  .questions-card2 {
-      width: 100%;
-  }
+    .questions-card2 {
+        width: 100%;
+    }
 }
 
-/* For screen sizes smaller than or equal to 480px */
 @media (max-width: 480px) {
-  .questions-container {
-      padding: 20px;
-      flex-direction: column;
-      gap: 10px;
-  }
+    .questions-container {
+        padding: 20px;
+        flex-direction: column;
+        gap: 10px;
+    }
 
-  .questions-card1 {
-      padding-top: 20px;
-      height: auto; /* Removed sticky positioning */
-  }
+    .questions-card1 {
+        padding-top: 20px;
+        height: auto;
+    }
 
-  .questions-card1 h3 {
-      font-size: 24px;
-  }
+    .questions-card1 h3 {
+        font-size: 24px;
+    }
 
-  .questions-card1 p {
-      width: 100%;
-      font-size: 12px;
-  }
+    .questions-card1 p {
+        width: 100%;
+        font-size: 12px;
+    }
 
-  .questions-card-ser, .questions-card-ser1 {
-      padding: 10px 15px;
-      gap: 12px;
-  }
+    .questions-card-ser,
+    .questions-card-ser1 {
+        padding: 10px 15px;
+        gap: 12px;
+    }
 
-  .questions-card-ser h4, .questions-card-ser1 h4 {
-      font-size: 12px;
-  }
+    .questions-card-ser h4,
+    .questions-card-ser1 h4 {
+        font-size: 12px;
+    }
 
-  .questions-card-ser p, .questions-card-ser1 p {
-      font-size: 10px;
-  }
+    .questions-card-ser p,
+    .questions-card-ser1 p {
+        font-size: 10px;
+    }
 }
