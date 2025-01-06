@@ -52,7 +52,7 @@ const Hero = () => {
     console.log("context",SelectedType)
     SetSelectedCountry(null)
     SetSelectedType(item);
-    navigate("/enquiryform");
+    navigate(`/enquiryform/${item}`);
   };
 
   const visittypedata = ["Work", "Study", "Migrate", "Travel"];
