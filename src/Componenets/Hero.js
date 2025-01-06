@@ -11,7 +11,7 @@ const Hero = () => {
   const heroRef = useRef(null);
   const contentRef = useRef(null);
   const navigate = useNavigate();
-  const { SetSelectedType } = useSelectedCountry();
+  const { SetSelectedCountry,SetSelectedType } = useSelectedCountry();
 
   useEffect(() => {
     gsap.fromTo(
@@ -49,6 +49,7 @@ const Hero = () => {
 
   const navidatetoForm = (item) => {
     console.log("itemm", item);
+    SetSelectedCountry(null)
     SetSelectedType(item);
     navigate("/enquiryform");
   };
