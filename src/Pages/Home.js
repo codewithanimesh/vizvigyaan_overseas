@@ -27,14 +27,13 @@ return(<>
 <OurStories/>
 <Teams/>
 
-<QuaryForm/>
+
 <Clients/>
 <Questions />
 <Countrysupport/>
 <SelectCountry/>
 <NewsLetter/>
 <GetIntouch/>
-
 <Footer/>
 </>)
 }

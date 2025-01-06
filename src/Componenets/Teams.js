@@ -69,14 +69,9 @@ const Teams = () => {
       </div>
 
       <div className="team-grid">
-        <div className="team-card">
-          {teamMembers.slice(2, 5).map((member, index) => (
+        <div className="team-card2">
+          {teamMembers.slice(2).map((member, index) => (
             <TeamCard key={`team-2-${index}`} {...member} ref={el => teamCardsRef.current[index + 2] = el} />
-          ))}
-        </div>
-        <div className="team-card">
-          {teamMembers.slice(5, 6).map((member, index) => (
-            <TeamCard key={`team-3-${index}`} {...member} ref={el => teamCardsRef.current[index + 5] = el} />
           ))}
         </div>
       </div>

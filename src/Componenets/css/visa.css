@@ -6,7 +6,7 @@
     gap: -384px;
     align-self: stretch;
     position: relative;
-    min-height: 90vh;
+    /* min-height: 90vh; */
     overflow: hidden;
 }
 
@@ -56,12 +56,13 @@
     gap: 24px;
     align-self: stretch;
     flex-wrap: wrap;
+    z-index: 20;
 }
 
 .visa-grid-item-heading {
     display: flex;
     width: 354.667px;
-    height: 220px;
+    min-height: 250px;
     padding: 32px;
     flex-direction: column;
     justify-content: flex-end;
@@ -72,7 +73,7 @@
     background: #FFF;
     overflow: hidden;
     position: relative;
-  
+
 }
 
 .visa-content-container {
@@ -87,6 +88,7 @@
     right: 0;
     height: 384px;
     top: 0;
+    z-index: 1;
 }
 
 .side-image .img {
@@ -112,12 +114,14 @@
     border-radius: 35px;
     background: #EDF6FA;
     padding: 4px;
-   
+    z-index: 1;
+
 }
 
 .heading-visa-div {
     padding-left: 64px;
-    
+    z-index: 10;
+
 }
 
 
@@ -128,8 +132,11 @@
 }
 
 @media (max-width: 768px) {
+    .visa-grid-item {
+        justify-content: space-between;
+    }
     .visa-container {
-        padding: 16px;
+        padding: 20px;
     }
 
     .visa-content {
@@ -142,13 +149,16 @@
     }
 
     .visa-grid {
-        padding: 0 0;
+        padding: 0;
     }
 
     .visa-grid-item-heading {
         width: 100%;
         max-width: 100%;
         padding: 16px;
+        h3{
+            margin-top: 500px;
+        }
     }
 
     .side-image img {
@@ -156,7 +166,15 @@
     }
 
     .heading-visa-div {
-        padding-left: 0;
+        padding-left: 10px;
+        padding-top: 20px;
+        padding-left: 0px;
+        font-size: 30px;
+        font-weight: 700;
+        line-height: 40px;
+    }
+    .visa-grid-item-heading h3{
+        margin-top: 50px;
     }
 }
 
@@ -173,9 +191,10 @@
 @media (min-width: 1025px) {
     .visa-content {
         width: 70%;
+        z-index: 1;
     }
 
     .visa-grid-item-heading {
         max-width: 300px;
     }
-}   
+}

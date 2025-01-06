@@ -9,13 +9,14 @@ import globe from "../assests/Globe.svg"
 import phone from "../assests/phone-alt.svg"
 import Email from "../assests/Email.svg"
 import bagpng from "../assests/Rectangle 18.png"
+import { countriesData } from '../countries/countriesData';
 import { useSelectedCountry } from '../context/selectedcountrycontext';
 
 const FormComponent = () => {
-    const { SelectedCountry } = useSelectedCountry();
+    const { SelectedCountry,SelectedType } = useSelectedCountry();
     const [formData, setFormData] = useState({
         name: '',
-        country: SelectedCountry || '', 
+        country: SelectedCountry || '',
         phone: '',
         email: '',
         message: '',
@@ -35,6 +36,8 @@ const FormComponent = () => {
         console.log(formData);
     };
 
+
+
     return (
         <>
             <div className="visa-container">
@@ -47,7 +50,7 @@ const FormComponent = () => {
                                 transform: "rotate(42.63deg)",
                                 position: "relative",
                                 right: "128.11px",
-                                left: "228px",
+                                left: "328px",
                                 top: "-166.19px",
                                 borderRadius: "51px",
                                 background: "#FFF",
@@ -60,7 +63,7 @@ const FormComponent = () => {
                                 transform: "rotate(42.63deg)",
                                 position: "relative",
                                 right: "127.11px",
-                                left: "200px",
+                                left: "300px",
                                 top: "-89.19px",
                                 borderRadius: "51px",
                                 background: "#E4F2F8"
@@ -74,7 +77,7 @@ const FormComponent = () => {
                                 position: "relative",
                                 right: "5.806px",
                                 top: "-118.475px",
-                                left: "270px",
+                                left: "370px",
                                 borderRadius: "51px",
                                 background: "#FFF"
                             }}
@@ -86,7 +89,7 @@ const FormComponent = () => {
                                 transform: "rotate(42.63deg)",
                                 position: "relative",
                                 right: "174.11px",
-                                left: "53px",
+                                left: "153px",
                                 bottom: "-15.417px",
                                 top: "60px",
                                 borderRadius: "51px",
@@ -107,7 +110,8 @@ const FormComponent = () => {
                                 background: "url(" + sideimg + ") lightgray 50% / cover no-repeat",
                                 position: "relative",
                                 marginTop: "64px",
-                                top: "-20px"
+                                top: "-20px",
+                                zIndex: "2"
                             }}
                         />
                     </div>
@@ -124,7 +128,7 @@ const FormComponent = () => {
                         <div className="form-details-div">
 
                             <div className="main-form-section">
-                                <h3>Migrate To <span style={{ color: "#F68712" }}>{SelectedCountry}</span></h3>
+                                {SelectedCountry && <h3>{SelectedType} To <span style={{ color: "#F68712" }}>{SelectedCountry}</span></h3>}
                                 <form className="form-style" onSubmit={handleSubmit}>
                                     <div className="input-div name-div">
                                         <p> I am</p>
@@ -163,10 +167,12 @@ const FormComponent = () => {
                                                     value={formData.country}
                                                     onChange={handleChange}
                                                 >
-                                                    <option value="">Select an option</option>
-                                                    <option value="option1">Option 1</option>
-                                                    <option value="option2">Option 2</option>
-                                                    <option value="option3">Option 3</option>
+                                                    <option value="">Select an Country</option>
+                                                    {countriesData?.map((country, index) => (
+                                                        <option key={index} value={country.name}>
+                                                            {country.name} <img src={country.flag} alt={`${country.name} flag`} style={{ width: '20px', marginLeft: '8px' }} />
+                                                        </option>
+                                                    ))}
                                                 </select>
                                             </div>
                                         )}

@@ -39,6 +39,7 @@
     flex-direction: column;
     gap: 40px;
     justify-content: space-between;
+    z-index: 10;
 }
 
 .contact-details-section h3 {
@@ -95,6 +96,7 @@
     border-left: 1px solid #EDF6FA;
     background: #FFF;
     backdrop-filter: blur(10px);
+    z-index: 15;
 }
 
 .form-style {

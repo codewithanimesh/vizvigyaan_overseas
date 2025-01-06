@@ -22,7 +22,8 @@ const Countrysupport = () => {
     { image: cardImg2, country: "Australia", description: "Average time to resolve a cyber" },
     { image: cardImg1, country: "Dubai", description: "Average time to resolve a cyber" },
     { image: cardImg1, country: "Turkey", description: "Average time to resolve a cyber" },
-    { image: cardImg1, country: "Turkey", description: "Average time to resolve a cyber" },
+
+
   ];
 
   return (
@@ -30,10 +31,9 @@ const Countrysupport = () => {
       <div className="country-support-container">
         <div
           style={{
-            marginLeft: "130px",
-            marginRight: "130px",
             display: "flex",
             justifyContent: "space-between",
+            alignItems:"center",
             gap: "40px",
           }}
         >
@@ -57,19 +57,22 @@ const Countrysupport = () => {
       <div className="country-support-container1">
         <div
           style={{
-            marginLeft: "130px",
-            marginRight: "130px",
+      
             display: "flex",
-            justifyContent: "flex-start",
+            // justifyContent: "start",
             gap: "40px",
           }}
         >
+          <div className="support-coinatiner">
           {bottomCountries.map((country, index) => (
+            
             <CountryCard key={index} {...country} />
+            
           ))}
+          </div>
         </div>
       </div>
-      <div className="country-support-container2"></div>
+      {/* <div className="country-support-container2"></div> */}
     </div>
   );
 };

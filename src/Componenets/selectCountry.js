@@ -4,26 +4,26 @@ import { useSelectedCountry } from "../context/selectedcountrycontext";
 import { useNavigate } from "react-router-dom";
 const SelectCountry = () => {
     const navigate = useNavigate();
-    const { SelectedCountry, SetSelectedCountry } = useSelectedCountry();
+    const { SelectedCountry, SetSelectedCountry,SetSelectedType } = useSelectedCountry();
 
     const countryData = [
         {
             region: "Asia",
-            visaTypes: ["Tourist", "Student", "Work"],
+            visaTypes: ["Tourist", "Study", "Work"],
             countries: [
-                { name: "India", flag: "https://flagcdn.com/w320/in.png", visaTypes: ["Tourist", "Student", "Work"] },
+                { name: "India", flag: "https://flagcdn.com/w320/in.png", visaTypes: ["Tourist", "Study", "Work"] },
                 { name: "China", flag: "https://flagcdn.com/w320/cn.png", visaTypes: ["Tourist", "Work"] },
-                { name: "Japan", flag: "https://flagcdn.com/w320/jp.png", visaTypes: ["Tourist", "Student"] },
+                { name: "Japan", flag: "https://flagcdn.com/w320/jp.png", visaTypes: ["Tourist", "Study"] },
                 { name: "South Korea", flag: "https://flagcdn.com/w320/kr.png", visaTypes: ["Tourist", "Work"] },
                 { name: "Indonesia", flag: "https://flagcdn.com/w320/id.png", visaTypes: ["Tourist", "Work"] }
             ]
         },
         {
             region: "Europe",
-            visaTypes: ["Tourist", "Student", "Work"],
+            visaTypes: ["Tourist", "Study", "Work"],
             countries: [
-                { name: "Germany", flag: "https://flagcdn.com/w320/de.png", visaTypes: ["Tourist", "Student", "Work"] },
-                { name: "France", flag: "https://flagcdn.com/w320/fr.png", visaTypes: ["Tourist", "Student"] },
+                { name: "Germany", flag: "https://flagcdn.com/w320/de.png", visaTypes: ["Tourist", "Study", "Work"] },
+                { name: "France", flag: "https://flagcdn.com/w320/fr.png", visaTypes: ["Tourist", "Study"] },
                 { name: "Italy", flag: "https://flagcdn.com/w320/it.png", visaTypes: ["Tourist", "Work"] },
                 { name: "Spain", flag: "https://flagcdn.com/w320/es.png", visaTypes: ["Tourist"] },
                 { name: "United Kingdom", flag: "https://flagcdn.com/w320/gb.png", visaTypes: ["Tourist", "Work"] }
@@ -53,6 +53,7 @@ const SelectCountry = () => {
 
     const handleVisaTypeSelect = (visaType) => {
         setSelectedVisaType(visaType);
+        SetSelectedType (visaType)
     };
 
     const filteredCountries = selectedCountries.filter((country) =>

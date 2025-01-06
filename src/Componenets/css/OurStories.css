@@ -50,7 +50,6 @@
     align-items: center;
     gap: 20px;
     flex-wrap: wrap;
-    /* margin: 0 auto; */
     min-width: 920px;
 }
 
@@ -180,7 +179,7 @@
 
 @media (max-width: 768px) {
     .main-div-guildace-osr-stories {
-        padding: 60px;
+        padding: 20px;
         flex-direction: column;
     }
 
@@ -189,6 +188,7 @@
     }
 
     .map-items-container-ourstories {
+        width: 100%; /* Full width on 768px or smaller screens */
         padding: 16px;
     }
 
@@ -216,7 +216,7 @@
 
 @media (max-width: 480px) {
     .main-div-guildace-osr-stories {
-        padding: 40px;
+        padding: 20px;
         flex-direction: column;
     }
 

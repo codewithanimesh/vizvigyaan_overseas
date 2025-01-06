@@ -201,6 +201,11 @@
     background-color: #F68712;
     color: white;
 }
+@media (max-width: 1000px) {
+    .selected-country-heading{
+        gap: 10px;
+    }
+}
 
 @media (max-width: 480px) {
     .main-selected-country-div {

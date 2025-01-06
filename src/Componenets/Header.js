@@ -12,37 +12,45 @@ const Header = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
+  // Close the menu when a link is clicked
+  const closeMenu = () => {
+    setIsMenuOpen(false);
+  };
+
   return (
     <div className="header">
       <div className="navbar">
         <div className="logo">
-          <NavLink to="/" onClick={toggleMenu}>
+          <NavLink to="/" onClick={() => { closeMenu();  }}>
             <img src={logo} alt="Logo" />
           </NavLink>
 
           <div className={`nav-links ${isMenuOpen ? "active" : ""}`}>
-            <NavLink to="/" onClick={toggleMenu}>
+            <NavLink to="/" onClick={closeMenu}>
               Home
             </NavLink>
-            <NavLink to="/enquiryform" onClick={toggleMenu}>
+            <NavLink to="/enquiryform" onClick={closeMenu}>
               Form
             </NavLink>
-            <NavLink to="/admissions" onClick={toggleMenu}>
+            <NavLink to="/aboutus" onClick={closeMenu}>
+              About Us
+            </NavLink>
+            <NavLink to="/admissions" onClick={closeMenu}>
               Admissions
             </NavLink>
-            <NavLink to="/work" onClick={toggleMenu}>
+            <NavLink to="/work" onClick={closeMenu}>
               Work
             </NavLink>
-            <NavLink to="/study" onClick={toggleMenu}>
+            <NavLink to="/study" onClick={closeMenu}>
               Study
             </NavLink>
-            <NavLink to="/jobs" onClick={toggleMenu}>
+            <NavLink to="/jobs" onClick={closeMenu}>
               Jobs
             </NavLink>
-            <NavLink to="/visa" onClick={toggleMenu}>
+            <NavLink to="/visa" onClick={closeMenu}>
               Visa
             </NavLink>
-            <NavLink className="new-link" to="/contact" onClick={toggleMenu}>
+            <NavLink className="new-link" to="/contact" onClick={closeMenu}>
               Contact
             </NavLink>
           </div>
@@ -50,7 +58,7 @@ const Header = () => {
 
         {/* "Contact Us" Button - This will be visible on Desktop */}
         <div className="nav-linkss">
-          <NavLink to="/contact" onClick={toggleMenu}>
+          <NavLink to="/contact" onClick={closeMenu}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="20"

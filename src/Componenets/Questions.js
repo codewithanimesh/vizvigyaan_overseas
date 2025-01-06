@@ -71,7 +71,7 @@ const Questions = () => {
                 alignItems: "flex-end",
                 gap: "10px",
                 position: "absolute",
-                right: "-5.963px",
+                right: "-8.963px",
                 top: "2px",
                 borderRadius: "35px",
                 background: "#EDF6FA",
@@ -82,9 +82,9 @@ const Questions = () => {
                 style={{
                   display: "flex",
                   width: "15px",
-                  height: "20px",
+                  height: "10px",
                   transform: "rotate(45deg)",
-                  padding: "8px 11px",
+                  padding: " 11px",
                   flexDirection: "column",
                   justifyContent: "center",
                   alignItems: "center",
@@ -95,6 +95,7 @@ const Questions = () => {
                   borderRadius: "18px",
                   background: "#FFF",
                   boxShadow: "0px 0px 10px 0px rgba(0, 0, 0, 0.16)",
+                 
                 }}
               >
                 {expandedIndex === index ? "-" : "+"}
