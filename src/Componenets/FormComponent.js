@@ -2,8 +2,7 @@ import React, { useState, useEffect } from 'react';
 import sideimg from "../assests/side-img.jpeg";
 import "./css/FormComponent.css";
 import girlpic from "../assests/Rectangle 4 (1).png";
-import callsvg from "../assests/Call.svg";
-import mailsvg from "../assests/mail.svg";
+
 import person from "../assests/Page-1.svg";
 import globe from "../assests/Globe.svg";
 import phone from "../assests/phone-alt.svg";
@@ -78,7 +77,7 @@ const FormComponent = () => {
                 <div className="new-visa-div">
                     <div className="heading-visa-div">
                         <div className="form-ditail-div">
-                            <h5>Migrate</h5>
+                            <h5>{SelectedType}</h5>
                             <h2>Feel Free to Call Us</h2>
                             <p>Transmds is the world’s leading global logistics company.</p>
                         </div>
@@ -87,11 +86,11 @@ const FormComponent = () => {
                         <div className="form-details-div">
 
                             <div className="main-form-section">
-                                {SelectedCountry && (
+                                { 
                                     <h3>
-                                        {SelectedType} To <span style={{ color: "#F68712" }}>{SelectedCountry}</span>
+                                        {SelectedType && SelectedType} {SelectedCountry && "To"} <span style={{ color: "#F68712" }}>{ SelectedCountry && SelectedCountry}</span>
                                     </h3>
-                                )}
+                                }
                                 <form className="form-style" onSubmit={handleSubmit}>
                                     <div className="input-div name-div">
                                         <p> I am</p>
