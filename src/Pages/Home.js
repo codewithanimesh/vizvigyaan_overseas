@@ -18,20 +18,22 @@ import Teams from "../Componenets/Teams";
 import SelectCountry from "../Componenets/selectCountry";
 const Home = () => {
     return (<>
-        <Head />
-        <Header />
-        <Hero />
-        <Visa />
-        <Guidance2 />
-        <SelectCountry />
-        <OurStories />
-        <Teams />
-        <Clients />
-        <Questions />
-        <Countrysupport />
-        <NewsLetter />
-        <GetIntouch />
-        <Footer />
+        <div className="home">
+            <Head />
+            <Header />
+            <Hero />
+            <Visa />
+            <Guidance2 />
+            <SelectCountry />
+            <OurStories />
+            <Teams />
+            <Clients />
+            <Questions />
+            <Countrysupport />
+            <NewsLetter />
+            <GetIntouch />
+            <Footer />
+        </div>
     </>)
 }
 export default Home
