@@ -21,35 +21,77 @@ const Header = () => {
     <div className="header">
       <div className="navbar">
         <div className="logo">
-          <NavLink to="/" onClick={() => { closeMenu();  }}>
+          <NavLink to="/" onClick={() => { closeMenu(); }}>
             <img src={logo} alt="Logo" />
           </NavLink>
 
           <div className={`nav-links ${isMenuOpen ? "active" : ""}`}>
-            <NavLink to="/" onClick={closeMenu}>
-              Home
-            </NavLink>
-            <NavLink to="/enquiryform" onClick={closeMenu}>
+            <div className="hover-logo">
+              <div className="style-circle-containrer">
+                <div className="big-circle"></div>
+                <div className="small-circle"></div>
+              </div>
+              <NavLink to="/" onClick={closeMenu} activeClassName="active">
+                Home
+              </NavLink>
+            </div>
+            {/* <NavLink to="/enquiryform" onClick={closeMenu}>
               Form
-            </NavLink>
-            <NavLink to="/aboutus" onClick={closeMenu}>
-              About Us
-            </NavLink>
-            <NavLink to="/admissions" onClick={closeMenu}>
-              Admissions
-            </NavLink>
-            <NavLink to="/work" onClick={closeMenu}>
-              Work
-            </NavLink>
-            <NavLink to="/study" onClick={closeMenu}>
-              Study
-            </NavLink>
-            <NavLink to="/jobs" onClick={closeMenu}>
-              Jobs
-            </NavLink>
-            <NavLink to="/visa" onClick={closeMenu}>
-              Visa
-            </NavLink>
+            </NavLink> */}
+            <div className="hover-logo">
+              <div className="style-circle-containrer">
+                <div className="big-circle">
+                </div> <div className="small-circle">
+                </div></div>
+              <NavLink to="/aboutus" onClick={closeMenu}>
+                About Us
+              </NavLink>
+            </div>
+            {/*  <div className="hover-logo">
+              <div className="style-circle-containrer">
+                <div className="big-circle">
+                </div> <div className="small-circle">
+                </div></div>
+              <NavLink to="/admission" onClick={closeMenu}>
+               Admission
+              </NavLink>
+            </div>
+             <div className="hover-logo">
+              <div className="style-circle-containrer">
+                <div className="big-circle">
+                </div> <div className="small-circle">
+                </div></div>
+              <NavLink to="/work" onClick={closeMenu}>
+               Work
+              </NavLink>
+            </div>
+             <div className="hover-logo">
+              <div className="style-circle-containrer">
+                <div className="big-circle">
+                </div> <div className="small-circle">
+                </div></div>
+              <NavLink to="/study" onClick={closeMenu}>
+                Study
+              </NavLink>
+            </div>
+            <div className="hover-logo">
+              <div className="style-circle-containrer">
+                <div className="big-circle">
+                </div> <div className="small-circle">
+                </div></div>
+              <NavLink to="/jobs" onClick={closeMenu}>
+               Jobs
+              </NavLink>
+            </div>
+           <div className="hover-logo">
+              <div className="style-circle-containrer">
+                <div className="big-circle">
+                </div> <div className="small-circle">
+                </div></div>
+              <NavLink to="/visa" onClick={closeMenu}>
+                Visa
+              </NavLink>
+            </div> */}
             <NavLink className="new-link" to="/contact" onClick={closeMenu}>
               Contact
             </NavLink>

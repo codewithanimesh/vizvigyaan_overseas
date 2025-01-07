@@ -20,6 +20,7 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    width: 100%;
 }
 
 .guildace-content-div {
@@ -155,6 +156,7 @@
 
     .rotate-div-content h3 {
         font-size: 18px;
+
     }
 
     .guildace-title-div h2 {
@@ -173,6 +175,7 @@
     .dot-of-number {
         width: 18px;
         height: 18px;
+
     }
 }
 
@@ -220,6 +223,7 @@
     .dot-of-number {
         width: 16px;
         height: 16px;
+
     }
 }
 
@@ -256,5 +260,6 @@
     .dot-of-number {
         width: 14px;
         height: 14px;
+
     }
 }

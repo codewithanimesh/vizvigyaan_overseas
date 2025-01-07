@@ -6,14 +6,14 @@ import Footer from "../Componenets/Footer";
 import Questions from "../Componenets/Questions";
 const Contact = () => {
     return (<>
-        <div>
+      
             <Head />
             <Header />
             <ContactusForm />
             <Questions/>
             <Footer/>
             
-        </div>
+       
     </>)
 
 }

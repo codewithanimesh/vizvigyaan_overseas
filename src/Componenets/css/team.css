@@ -101,9 +101,9 @@
 
 /* For screens smaller than 1400px */
 @media screen and (max-width: 1400px) {
-  .main-team-container {
+  /* .main-team-container {
     padding: 40px 10px;
-  }
+  } */
 
   .team-card-img img {
     width: 280px;
@@ -113,9 +113,9 @@
 
 /* For screens smaller than 1200px */
 @media screen and (max-width: 1200px) {
-  .main-team-container {
+  /* .main-team-container {
     padding: 40px 50px;
-  }
+  } */
 
   .team-header h3 {
     font-size: 32px;

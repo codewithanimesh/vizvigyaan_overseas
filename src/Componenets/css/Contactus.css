@@ -29,6 +29,7 @@
     border-right: 1px solid #E4F2F8;
     border-bottom: 1px solid #E4F2F8;
     background: #FFF;
+    z-index: 20;
 
     h3 {
         color: #414141;

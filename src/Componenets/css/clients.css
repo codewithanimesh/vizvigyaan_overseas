@@ -113,6 +113,7 @@
     font-size: 24px;
     line-height: 32px;
   }
+
   .client-card p {
     font-size: 14px;
     line-height: 24px;
@@ -137,14 +138,17 @@
   .client-container {
     padding: 20px;
   }
+
   .client-card1 h3 {
     font-size: 12px;
     line-height: 20px;
   }
+
   .client-card p {
     font-size: 12px;
     line-height: 20px;
   }
+
   .client-card h3 {
     font-size: 20px;
     line-height: 28px;

@@ -1,7 +1,25 @@
 :root {
   --primary-color: #F28623;
-  --font-size:36px;
+  --font-size: 36px;
 }
-*{
+
+.app {
+  width: 100%;
+  max-width: 1600px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
   box-sizing: border-box;
+  border: none;
+}
+
+
+@media screen and (min-width: 1600px) {
+  .app {
+    background-color: #f7f9fb85;  
+    border: 1px solid rgba(0, 0, 0, 0.047);  
+  }
+  .main-div-guildace-osr-stories {
+    background-color: transparent;
+  }
 }

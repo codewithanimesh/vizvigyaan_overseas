@@ -16,25 +16,22 @@ import OurStories from "../Componenets/OurStories";
 import Footer from "../Componenets/Footer";
 import Teams from "../Componenets/Teams";
 import SelectCountry from "../Componenets/selectCountry";
-const Home=()=>{
-return(<>
-<Head/>
-<Header />
-
-<Hero />
-<Visa />
-<Guidance2/>
-<OurStories/>
-<Teams/>
-
-
-<Clients/>
-<Questions />
-<Countrysupport/>
-<SelectCountry/>
-<NewsLetter/>
-<GetIntouch/>
-<Footer/>
-</>)
+const Home = () => {
+    return (<>
+        <Head />
+        <Header />
+        <Hero />
+        <Visa />
+        <Guidance2 />
+        <SelectCountry />
+        <OurStories />
+        <Teams />
+        <Clients />
+        <Questions />
+        <Countrysupport />
+        <NewsLetter />
+        <GetIntouch />
+        <Footer />
+    </>)
 }
 export default Home

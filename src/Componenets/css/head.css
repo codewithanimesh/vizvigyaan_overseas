@@ -10,7 +10,7 @@
 
 .head {
   display: flex;
-  padding: 4px 24px 4px 100px;
+  padding: 4px 24px 4px 200px;
   justify-content: space-between;
   align-items: center;
   flex: 1 0 0;
@@ -20,7 +20,7 @@
 
 .head-1 {
   display: flex;
-  padding: 4px 0.672px 5px 0px;
+  /* padding: 4px 0.672px 5px 0px; */
   justify-content: center;
   align-items: flex-start;
   gap: 24px;
@@ -63,6 +63,9 @@
   font-size: 16px;
   font-weight: 400;
   line-height: 16px;
+}
+.social-icon{
+  cursor: pointer;
 }
 
 .head-bottom {
@@ -159,7 +162,7 @@
 @media screen and (min-width: 1025px) {
   .head {
     width: 85%;
-    padding: 4px 24px 4px 100px;
+    /* padding: 4px 24px 4px 100px; */
     justify-content: space-between;
   }
 
