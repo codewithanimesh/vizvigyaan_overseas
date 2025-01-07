@@ -11,7 +11,7 @@ const Hero = () => {
   const heroRef = useRef(null);
   const contentRef = useRef(null);
   const navigate = useNavigate();
-  const { SetSelectedCountry,SetSelectedType } = useSelectedCountry();
+  const { SetSelectedCountry,SetSelectedType,SelectedType } = useSelectedCountry();
 
   useEffect(() => {
     gsap.fromTo(
@@ -28,6 +28,7 @@ const Hero = () => {
         },
       }
     );
+
     gsap.fromTo(
       contentRef.current,
       { y: 50, opacity: 0 },
@@ -47,10 +48,11 @@ const Hero = () => {
   }, []);
 
   const navidatetoForm = (item) => {
-    console.log("itemm", item);
+    console.log("itemmm", item);
+    console.log("context",SelectedType)
     SetSelectedCountry(null)
     SetSelectedType(item);
-    navigate("/enquiryform");
+    navigate(`/enquiryform/${item}`);
   };
 
   const visittypedata = ["Work", "Study", "Migrate", "Travel"];
@@ -84,6 +86,7 @@ const Hero = () => {
           <div className="trusted-badge">
             <h3>Your Most Trusted Partners</h3>
           </div>
+
           <div className="hero-content-heading">
             <h1>
               Immigration & Visa

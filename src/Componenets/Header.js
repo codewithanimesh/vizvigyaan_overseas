@@ -29,13 +29,13 @@ const Header = () => {
             <NavLink to="/" onClick={closeMenu}>
               Home
             </NavLink>
-            <NavLink to="/enquiryform" onClick={closeMenu}>
+            {/* <NavLink to="/enquiryform" onClick={closeMenu}>
               Form
-            </NavLink>
+            </NavLink> */}
             <NavLink to="/aboutus" onClick={closeMenu}>
               About Us
             </NavLink>
-            <NavLink to="/admissions" onClick={closeMenu}>
+            {/* <NavLink to="/admissions" onClick={closeMenu}>
               Admissions
             </NavLink>
             <NavLink to="/work" onClick={closeMenu}>
@@ -49,7 +49,7 @@ const Header = () => {
             </NavLink>
             <NavLink to="/visa" onClick={closeMenu}>
               Visa
-            </NavLink>
+            </NavLink> */}
             <NavLink className="new-link" to="/contact" onClick={closeMenu}>
               Contact
             </NavLink>
