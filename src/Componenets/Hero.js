@@ -5,6 +5,7 @@ import heroimg from "../assests/heroimg.jpeg";
 import "./css/hero.css";
 import { useNavigate } from "react-router-dom";
 import { useSelectedCountry } from "../context/selectedcountrycontext";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 gsap.registerPlugin(ScrollTrigger);
 
 const Hero = () => {
