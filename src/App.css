@@ -2,3 +2,34 @@
   --primary-color: #F28623;
   --font-size:36px;
 }
+
+/* styles.css */
+
+/* Set up the container for the page transition */
+.page-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+}
+
+/* Fade-in animation when the page enters */
+.page-enter {
+  opacity: 0;
+}
+
+.page-enter-active {
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+}
+
+/* Fade-out animation when the page exits */
+.page-exit {
+  opacity: 1;
+}
+
+.page-exit-active {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+

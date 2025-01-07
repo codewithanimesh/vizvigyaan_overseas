@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route,Switch,useLocation} from "react-router-dom";
 import 'bootstrap-icons/font/bootstrap-icons.css';
 import EnquiryForm from "./Pages/EnquiryForm";
 import Home from "./Pages/Home";
@@ -8,6 +8,7 @@ import ScrollToTop from "./Componenets/ScrollToTop"
 import AboutUs from "./Componenets/AboutUs";
 import Contact from "./Pages/Contact";
 const App = () => {
+  
 
   return (<>
   <SelectedcountryProvider>
