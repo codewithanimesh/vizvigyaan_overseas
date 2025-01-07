@@ -5,6 +5,8 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 code {
@@ -16,5 +18,13 @@ code {
   --font-size:36px;
 }
 *{
+  box-sizing: border-box;
+  
+}
+#root{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   box-sizing: border-box;
 }

@@ -1,20 +1,14 @@
 import React, { useState } from "react";
-import "./css/AboutUs.css"
+
 import "../Componenets/css/AboutUs.css";
-import heroimg from "../assests/heroimg.jpeg";
+import "../App.css"
 import Head from "../Componenets/Head";
 import Header from "../Componenets/Header";
 import aboutusimg from "../assests/aboutusimg.jpeg";
 import Teams from "../Componenets/Teams"
-import Footer from "./Footer";
+import Footer from "../Componenets/Footer";
 import girlpic from "../assests/Rectangle 4 (1).png"
-import callsvg from "../assests/Call.svg"
-import mailsvg from "../assests/mail.svg"
-import person from "../assests/Page-1.svg"
-import globe from "../assests/Globe.svg"
-import phone from "../assests/phone-alt.svg"
-import Email from "../assests/Email.svg"
-import bagpng from "../assests/Rectangle 18.png"
+
 import { useSelectedCountry } from '../context/selectedcountrycontext';
 import sideimg from "../assests/side-img.jpeg";
 const AboutUs = () => {
@@ -39,28 +33,8 @@ const AboutUs = () => {
   );
 
 
-  const { SelectedCountry } = useSelectedCountry();
-  const [formData, setFormData] = useState({
-    name: '',
-    country: SelectedCountry || '',
-    phone: '',
-    email: '',
-    message: '',
-    termsAccepted: false,
-  });
+ 
 
-  const handleChange = (e) => {
-    const { name, value, type, checked } = e.target;
-    setFormData({
-      ...formData,
-      [name]: type === 'checkbox' ? checked : value
-    });
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log(formData);
-  };
 
   const FirstContainer = () => {
     return (<>
@@ -224,14 +198,18 @@ const AboutUs = () => {
     </>)
   }
 
+  
+
   return (
     <>
+    <div className="animatediv">
       <Head />
       <Header />
       <FirstContainer />
       <SecondContainer />
       <Teams />
       <Footer />
+      </div>
     </>
   );
 };
