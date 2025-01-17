@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "../Componenets/css/footer.css";
-import "bootstrap-icons/font/bootstrap-icons.css";
+
 
 const Footer = () => {
   return (
