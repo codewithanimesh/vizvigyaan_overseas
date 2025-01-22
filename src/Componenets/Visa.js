@@ -88,7 +88,7 @@ const Visa = () => {
       </div>
       <div className="new-visa-div">
       <h2 className="heading-visa-div">
-            <span style={{ color: "black" }}>Visa types and eligibility</span>{" "}
+            <span >Visa types and eligibility</span>{" "}
             <br />
             <span style={{ color: " #F28623" }}>assessment</span>
             <br />

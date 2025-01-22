@@ -132,6 +132,14 @@
 }
 .heading-visa-div{
     color: #414141 !important;
+    padding-left: 10px;
+    padding-top: 20px;
+    padding-left: 0px;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 40px;
+    padding-left: 64px;
+    
 }
 
 @media (max-width: 768px) {
@@ -169,7 +177,6 @@
     }
 
     .heading-visa-div {
-
         color: #414141;
         padding-left: 10px;
         padding-top: 20px;
